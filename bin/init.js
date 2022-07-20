@@ -152,7 +152,7 @@ var main = async () => {
   spinner3.succeed(`${chalk.cyan.bold(appName)} packages installed!`);
   const spinner2 = ora2('Initializing git repo');
   spinner2.start();
-  const initCmd = "git init --initial-branch=main; git add .; git commit -m init";
+  const initCmd = "git init; git add .; git commit -m init";
   await execa(initCmd, { cwd: projectDir });
   spinner2.succeed(`${chalk.cyan.bold(appName)} git repo created!`);
   logger.info("Next steps:");
