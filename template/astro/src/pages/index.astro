@@ -1,0 +1,26 @@
+---
+import '../styles/style.scss';
+import Head from '../components/head.astro'
+import data from '../files/prepare.js'
+
+---
+<!DOCTYPE html>
+<html lang="en">
+  <Head />
+  <script type="module" define:vars={{ data }}>
+  import init from '/files/init.js'
+  init(data)
+  </script> 
+  <body>
+    <div class="wrapper grow">
+			<main class="content">
+				<section class="intro">
+					<h1 class="latest">{data[0].city}</h1>
+					<p>{data[0].change}</p>
+          <p id="date" />
+				</section>
+      </main>
+    </div>
+  </body>
+</html>
+

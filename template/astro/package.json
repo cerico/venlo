@@ -1,0 +1,23 @@
+{
+  "name": "@example/minimal",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "yay": "astro build",
+    "build": "astro build && subfont -ir --root dist && node generate-hashes",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^1.0.0-beta.35",
+    "subfont": "^6.4.2"
+  },
+  "dependencies": {
+    "astro-compress": "0.0.8",
+    "cheerio": "^1.0.0-rc.11",
+    "d3": "^7.4.4",
+    "globby": "^13.1.1",
+    "sass": "^1.52.1"
+  }
+}

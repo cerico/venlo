@@ -1,0 +1,25 @@
+{
+  "name": "venlo",
+  "version": "1.0.10",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "venlo": "bin/init.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "commander": "^9.3.0",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.1.0",
+    "gradient-string": "^2.0.1",
+    "inquirer": "^9.0.0",
+    "ora": "^6.1.2",
+    "url": "^0.11.0"
+  }
+}
