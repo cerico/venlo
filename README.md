@@ -1,15 +1,17 @@
-# venlo
+# Venlo
 
 Scaffolder for Astro and NextJs apps
 
 ### NextJS
 
-<img width="493" alt="image" src="https://user-images.githubusercontent.com/4191428/183379729-9cf02ce8-19a0-44db-b8aa-12a8f06a8842.png">
+<img width="514" alt="image" src="https://user-images.githubusercontent.com/4191428/183381781-176769cc-5755-42d0-ac31-639ed4967a75.png">
+
 
 ### Astro
 
-<img width="406" alt="Screenshot 2022-08-08 at 10 39 13" src="https://user-images.githubusercontent.com/4191428/183379611-3b2b8083-1d50-4894-8450-fe249c0a5cfc.png">
+<img width="427" alt="image" src="https://user-images.githubusercontent.com/4191428/183381827-a463822d-2e3e-4127-9caf-0f5f24807678.png">
 
-<img width="495" alt="Screenshot 2022-08-08 at 10 53 03" src="https://user-images.githubusercontent.com/4191428/183379573-d73ef2ce-43cb-40ed-832f-a359058d6d9e.png">
+<img width="520" alt="image" src="https://user-images.githubusercontent.com/4191428/183381865-110360d5-226e-4a5d-93f5-f35d5fa3c675.png">
+
 
 
