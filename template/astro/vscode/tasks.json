@@ -1,0 +1,18 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+  {
+    "type": "process",
+    "label": "zsh",
+    "command": "/bin/zsh",  // <-- your shell here
+    "problemMatcher": [],
+    "presentation": {
+        "echo": false,  // silence "Executing task ..."
+        "focus": true,
+        "group": "build",  // some arbitrary name for the group
+        "panel": "dedicated"
+    }
+  }]
+}

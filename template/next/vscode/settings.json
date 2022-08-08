@@ -1,0 +1,39 @@
+{
+  "[css]" : {
+    "editor.defaultFormatter" : "stylelint.vscode-stylelint"
+  },
+  "javascript.updateImportsOnFileMove.enabled" : "always",
+  "editor.accessibilitySupport" : "off",
+  "bracketPairColorizer.depreciation-notice" : false,
+  "[json]" : {
+    "editor.defaultFormatter" : "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel" : 1,
+  "[javascript]" : {
+    "editor.defaultFormatter" : "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme" : "zombies_ate_my_neighbors",
+  "editor.fontFamily" : "Victor Mono",
+  "[html]" : {
+    "editor.defaultFormatter" : "vscode.html-language-features"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "npm.keybindingsChangedWarningShown": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "editor.tabSize": 2
+}

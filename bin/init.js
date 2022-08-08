@@ -54,6 +54,8 @@ var renderTitle = () => {
 var runCli = async () => {
   const cliResults = {};
   const cliProvidedName = process.argv[2];
+  console.log('__filename')
+  console.log(PKG_ROOT)
   if (cliProvidedName) {
     cliResults.appName = cliProvidedName;
   } else {
@@ -109,10 +111,11 @@ var main = async () => {
   }
   const srcDir = path.join(PKG_ROOT, languages[language]);
 
-  const spinner = ora2(`Scaffolding in: ${projectDir} \n`);
+  const spinner = ora2(`Scaffolding ${language} app in: ${projectDir} \n`);
   spinner.start();
   await fs.copy(srcDir, projectDir);
   await fs.rename(`${projectDir}/gitignore`, `${projectDir}/.gitignore`)
+  await fs.rename(`${projectDir}/vscode`, `${projectDir}/.vscode`)
   if (packages === 'python' && checkPython()) {
     const pkgDir = path.join(PKG_ROOT, `template/python`);
     await fs.mkdirSync(`${projectDir}/src/python/`);
