@@ -54,8 +54,6 @@ var renderTitle = () => {
 var runCli = async () => {
   const cliResults = {};
   const cliProvidedName = process.argv[2];
-  console.log('__filename')
-  console.log(PKG_ROOT)
   if (cliProvidedName) {
     cliResults.appName = cliProvidedName;
   } else {
