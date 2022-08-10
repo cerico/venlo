@@ -10,7 +10,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.35",
+    "astro": "^1.0.1",
     "subfont": "^6.4.2"
   },
   "dependencies": {
