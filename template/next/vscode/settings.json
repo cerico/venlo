@@ -13,7 +13,6 @@
     "editor.defaultFormatter" : "esbenp.prettier-vscode"
   },
   "workbench.colorTheme" : "zombies_ate_my_neighbors",
-  "editor.fontFamily" : "Victor Mono",
   "[html]" : {
     "editor.defaultFormatter" : "vscode.html-language-features"
   },
