@@ -1,11 +1,43 @@
 :root {
-  --font-p: 'Belleza';
-  --font-mono: 'IBM Plex Mono';
-  --font-body: 'IBM Plex Sans';
+  --font-p: serif;
+  --font-body: sans-serif;
 }
 
 body { font-family: var(--font-body)}
 
 p, li { font-family: var(--font-p)}
 
-code { font-family: var(--font-mono)}
+p, li  {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  min-height: 1.625rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  
+  @media (min-width:768px) and (orientation:landscape) {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    min-height: 1.875rem;
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  max-width: 800px;
+  @media (min-width:768px) and (orientation:landscape) {
+    font-size: 4rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  @media (min-width:768px) and (orientation:landscape) {
+    font-size: 1.375rem;
+  }
+}
+

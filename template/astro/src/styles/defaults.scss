@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.active, li a:hover {
+  border-bottom: 2px solid;
+  padding-bottom:8px;
+}

@@ -1,0 +1,22 @@
+main {
+  display: grid;
+  grid-template-columns: 5%;
+  grid-template-rows: auto;
+  margin-bottom: 40px;
+  grid-auto-columns: 4.1667%;
+  margin-top: 51px;
+  position: static;
+  transition: position .7s ease-in-out;
+  @media (min-width:768px) and (orientation:landscape) {
+    padding-top: 100px;
+  }
+}
+
+.container {
+  grid-column-start: 2;
+  grid-column-end: span 18;
+  @media (min-width:768px) and (orientation:landscape) {
+    grid-column: 3/span 20;
+    max-width: 670px;
+  }
+}
