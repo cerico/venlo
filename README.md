@@ -13,5 +13,15 @@ Scaffolder for Astro and NextJs apps
 
 <img width="520" alt="image" src="https://user-images.githubusercontent.com/4191428/183381865-110360d5-226e-4a5d-93f5-f35d5fa3c675.png">
 
+<br />
 
 
+## Run locally
+
+```
+make generate
+```
+
+## Publish
+
+pulishes via github action
