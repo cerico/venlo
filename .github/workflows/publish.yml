@@ -1,0 +1,13 @@
+name: Publish to NPM
+on:
+  push:
+    branches: [ action ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+            
+      - name: Install JS Packages
+        run: npm publish
