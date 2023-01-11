@@ -10,7 +10,12 @@
   --green: #7EE787;
   --ft: #e9b5b8;
   --red: #fb3417;
-  --white: #fff
+  --white: #fff;
+}
+
+.colors {
+  background: var(--bg);
+  color: var(--fg);
 }
 
 .redwhite {

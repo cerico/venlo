@@ -9,8 +9,15 @@
   @media (min-width:768px) and (orientation:landscape) {
     z-index: 2;
     width: 100%;
+    right: 15px;
   }
 }
+
+.active, li a:hover {
+  border-bottom: 2px solid;
+  padding-bottom:8px;
+}
+
 .desktop-nav {
   display: none;
 

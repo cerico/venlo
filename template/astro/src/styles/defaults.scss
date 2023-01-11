@@ -1,16 +1,21 @@
+body {
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
+  color: currentColor;
 }
 
 li {
   list-style: none;
 }
 
-.active, li a:hover {
-  border-bottom: 2px solid;
-  padding-bottom:8px;
+
+::-webkit-scrollbar {
+  display: none;
 }

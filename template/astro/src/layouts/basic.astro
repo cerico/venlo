@@ -1,7 +1,7 @@
 ---
-import '../styles/style.scss';
+import '../styles/basic/style.scss';
 import Head from '../components/head.astro'
-import Header from '../components/header.astro'
+import Header from '../components/basic/header.astro'
 import data from '../files/prepare.js'
 ---
 <!DOCTYPE html>
@@ -14,6 +14,7 @@ import data from '../files/prepare.js'
   <body class="">
     <Header />
     <slot />
+    <script is:inline src="/files/drawer.js" />
   </body>
 </html>
 

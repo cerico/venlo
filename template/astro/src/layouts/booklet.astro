@@ -1,0 +1,18 @@
+---
+import '../styles/booklet/style.scss';
+import Head from '../components/head.astro'
+import data from '../files/prepare.js'
+---
+<!DOCTYPE html>
+<html lang="en">
+  <Head />
+  <script type="module" define:vars={{ data }}>
+  import init from '/files/init.js'
+  init(data)
+  </script> 
+  <body class="booklet">
+    <slot />
+    <script is:inline src="/files/tabs.js" />
+  </body>
+</html>
+
