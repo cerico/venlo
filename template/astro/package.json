@@ -5,12 +5,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "yay": "astro build",
-    "build": "astro build && subfont -ir --root dist && node generate-hashes",
+    "build": "astro build && node generate-hashes",
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.0.1",
+    "astro": "^1.6.10",
     "subfont": "^6.4.2"
   },
   "dependencies": {
