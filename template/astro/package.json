@@ -9,8 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.6.10",
-    "subfont": "^6.4.2"
+    "astro": "^1.6.10"
   },
   "dependencies": {
     "astro-compress": "0.0.13",
