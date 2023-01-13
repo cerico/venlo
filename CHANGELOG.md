@@ -1,5 +1,11 @@
 # 2023
 
+
+## [1.0.31] - January 13
+### Added
+- Default github actions
+- Preview command added to Makefile
+
 ## [1.0.30] - January 12
 ### Changed
 - Mobile version viewport changes
