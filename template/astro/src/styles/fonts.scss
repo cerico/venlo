@@ -5,15 +5,14 @@
 
 body { font-family: var(--font-body)}
 
-p, li { font-family: var(--font-p)}
-
 p, li  {
   font-size: 1rem;
   line-height: 1.625rem;
   min-height: 1.625rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  hyphens: auto;
+  text-align: justify;
+  font-family: var(--font-p);
   
   @media (min-width:768px) and (orientation:landscape) {
     font-size: 1.125rem;

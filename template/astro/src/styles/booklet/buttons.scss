@@ -1,5 +1,5 @@
 .button-two {
-  left: 33.3%;
+  left: calc(100%/3);
 }
 
 .button-three {
@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   z-index: 3;
-  width: 33.3%;
+  width: calc(100%/3);
   top: -48px;
   background: inherit;
   cursor: pointer;
@@ -23,7 +23,7 @@
   cursor: unset;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (orientation:landscape) {
   .button {
     height: 100%;
     width: 40px;

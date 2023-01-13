@@ -1,5 +1,13 @@
 # 2023
 
+## [1.0.30] - January 12
+### Changed
+- Mobile version viewport changes
+- Astro version to 1.6.10
+
+### Removed
+- Subfont
+
 ## [1.0.29] - January 11
 ### Added
 - Auto deploy on main branch
