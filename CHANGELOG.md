@@ -1,5 +1,9 @@
 # 2023
 
+## [1.0.32] - January 14
+### Added
+- MDX
+- gists view
 
 ## [1.0.31] - January 13
 ### Added

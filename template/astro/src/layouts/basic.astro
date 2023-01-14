@@ -6,19 +6,20 @@ import data from '../files/prepare.js'
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Basic</title>
+    <base href="/">
     <meta content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="a1 cafe">
-    <base href="/">
-    <title>Basic</title>
     <link rel="shortcut icon" href="/favicon.ico">
     <link
-    href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Cormorant+Garamond:300,400,600,700,800|Lato:100,90|Open+Sans:300,400,600,700,800|Gentium+Book+Basic:400,400italic|Vollkorn:400italic,400"
-    rel='stylesheet' type='text/css'>
+      href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Cormorant+Garamond:300,400,600,700,800|Lato:100,90|Open+Sans:300,400,600,700,800|Gentium+Book+Basic:400,400italic|Vollkorn:400italic,400"
+      rel='stylesheet' type='text/css'
+    >
   </head>
   <script type="module" define:vars={{ data }}>
-  import init from '/files/init.js'
-  init(data)
+    import init from '/files/init.js'
+    init(data)
   </script> 
   <body class="">
     <Header />

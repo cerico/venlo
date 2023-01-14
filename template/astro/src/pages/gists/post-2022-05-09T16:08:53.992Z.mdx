@@ -1,0 +1,29 @@
+---
+title: https server on port
+author: ''
+publishDate: Mon May 09 2022
+displayDate: 9 May
+cover: https://i.ibb.co/swkd4P2/ccc.jpg
+description: https server on port example
+tags:
+  - bluey
+  - yellow
+---
+
+## https server on port
+
+Here is a **starter** post with an example codeblock.
+
+
+```bash
+start () {
+	if [[ $# -eq 0 ]]
+	then
+		echo LAN address: `ifconfig | grep -A 4 en0 | grep -w inet | awk -F' ' '{print $2}'`:9000
+		python3 -m http.server 9000
+	else
+		echo LAN address: `ifconfig | grep -A 4 en0 | grep -w inet | awk -F' ' '{print $2}'`:$1
+		python3 -m http.server $1
+	fi
+}
+```
