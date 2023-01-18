@@ -11,6 +11,8 @@
   --ft: #e9b5b8;
   --red: #fb3417;
   --white: #fff;
+  --detective-red: #db5439;
+  --detective-yellow: #eebe6d;
 }
 
 .colors {
@@ -26,6 +28,26 @@
 .purplepink {
   --fg: var(--purple);
   --bg: var(--pink);
+}
+
+.detective {
+  --bg: var(--detective-red);
+  --fg: var(--black);
+  --entry-bg: var(--paper);
+  .entry {
+    background: var(--entry-bg)
+  }
+  em, strong {
+    color: var(--detective-red);
+  }
+  .almere {
+    background-color: var(--detective-yellow);
+    color: var(--detective-red);
+  }
+  .bremen, .charleroi {
+    color: var(--paper);
+    background-color: var(--fg);
+  }
 }
 
 body {

@@ -1,5 +1,6 @@
-[ ] - Decide default style from menu
-[ ] - Add gists layout
+18 January 2023
+
 [ ] - Add viz layout
 [ ] - Add city layout
-[ ] - add solidjs layout
+[ ] - Add solidjs layout
+[ ] - Add choose by menu
