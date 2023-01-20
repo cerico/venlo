@@ -1,8 +1,12 @@
 # 2023
 
+## [1.0.34] - January 20
+### Added
+- Blank page view
+
 ## [1.0.33] - January 20
 ### Added
-- Add scrolling picture view
+- Scrolling picture view
 
 ## [1.0.32] - January 14
 ### Added
