@@ -1,5 +1,9 @@
 # 2023
 
+## [1.0.35] - January 25
+### Added
+- Ability to choose which design will be index
+
 ## [1.0.34] - January 20
 ### Added
 - Blank page view
