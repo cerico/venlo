@@ -90,6 +90,20 @@ var runCli = async () => {
       default: "node",
     });
     cliResults.packages = packages;
+    const { design } = await inquirer.prompt({
+      name: "design",
+      type: "list",
+      message: "Choose a design",
+      choices: [
+        { name: "default", value: "default", short: "default" },
+        { name: "blank", value: "blank", short: "blank" },
+        { name: "gists", value: "gists", short: "gists" },
+        { name: "scroll", value: "scroll", short: "scroll" },
+        { name: "booklet", value: "booklet", short: "booklet" },
+      ],
+      default: "default",
+    });
+    cliResults.design = design;
   }
   cliResults.language = language;
   return cliResults;
@@ -100,7 +114,8 @@ var main = async () => {
   const {
     appName,
     language,
-    packages
+    packages,
+    design
   } = await runCli();
   const projectDir = path.resolve(process.cwd(), appName);
   const languages = {
@@ -124,6 +139,8 @@ var main = async () => {
     await fs.copyFile(py,py2);
     await fs.copyFile(js,js2);
   }
+  const chosenDesign = `${srcDir}/src/pages/${design}.astro`
+  await fs.copyFile(chosenDesign,`${projectDir}/src/pages/index.astro`);
   const pkgJson = await fs.readJSON(path.join(projectDir, "package.json"));
   pkgJson.name = appName;
   await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
