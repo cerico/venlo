@@ -1,5 +1,9 @@
 # 2023
 
+## [1.0.36] - January 28
+### Updated
+- Astro to v2
+
 ## [1.0.35] - January 25
 ### Added
 - Ability to choose which design will be index
