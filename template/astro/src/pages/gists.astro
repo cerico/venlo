@@ -13,7 +13,7 @@ const allPosts = uniqYears.map((i) => {
   <main>
     {allPosts.map((y, i) => {
       return (
-        <div>{y.map((item) => {
+        <article>{y.map((item) => {
           const id = (sortedPosts.length - sortedPosts.indexOf(item)).toString()
           return (
             <div class="wrapper" id={id}>
@@ -31,7 +31,7 @@ const allPosts = uniqYears.map((i) => {
               </div>
             </div>
           )
-        })}</div>
+        })}</article>
       )
     })}
   </main>
