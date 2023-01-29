@@ -1,5 +1,11 @@
 # 2023
 
+## [1.0.37] - January 28
+### Updated
+- In gist view create latest sample post with current date
+- Bugfix in Default view importing wrong layout
+- Max-width of 70rem added to global paragraph tag 
+
 ## [1.0.36] - January 28
 ### Updated
 - Astro to v2
