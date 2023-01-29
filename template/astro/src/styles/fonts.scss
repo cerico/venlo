@@ -5,19 +5,18 @@
 
 body { font-family: var(--font-body)}
 
+
 p, li  {
-  font-size: 1rem;
-  line-height: 1.625rem;
-  min-height: 1.625rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  --font-size: 1rem;
+  font-size: var(--font-size);
+  line-height: calc(var(--font-size) * 1.5);
+  min-height: calc(var(--font-size) * 1.5);
   text-align: justify;
   font-family: var(--font-p);
+  max-width: 70rem;
   
   @media (min-width:768px) and (orientation:landscape) {
-    font-size: 1.125rem;
-    line-height: 1.875rem;
-    min-height: 1.875rem;
+    --font-size: 1.25rem;
   }
 }
 

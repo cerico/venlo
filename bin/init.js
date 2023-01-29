@@ -170,6 +170,8 @@ var main = async () => {
   spinner3.succeed(`${chalk.cyan.bold(appName)} packages installed!`);
   const spinner2 = ora2('Initializing git repo');
   spinner2.start();
+  const gistCmd = "node gist.js"
+  await execa(gistCmd, { cwd: projectDir });
   const initCmd = "git init; git add .; git commit -m init";
   await execa(initCmd, { cwd: projectDir });
   spinner2.succeed(`${chalk.cyan.bold(appName)} git repo created!`);
