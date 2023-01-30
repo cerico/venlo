@@ -1,5 +1,9 @@
 # 2023
 
+## [1.0.38] - January 30
+### Updated
+- Add max-widths for page wrappers and for articles
+
 ## [1.0.37] - January 28
 ### Updated
 - In gist view create latest sample post with current date
