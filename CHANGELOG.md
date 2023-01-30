@@ -1,5 +1,9 @@
 # 2023
 
+## [1.0.39] - January 30
+### Updated
+- Add typology layout with fonts
+
 ## [1.0.38] - January 30
 ### Updated
 - Add max-widths for page wrappers and for articles
