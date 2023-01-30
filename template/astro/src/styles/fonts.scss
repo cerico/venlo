@@ -5,6 +5,10 @@
 
 body { font-family: var(--font-body)}
 
+article {
+  max-width: 70rem;
+  margin: 0 auto;
+}
 
 p, li  {
   --font-size: 1rem;
