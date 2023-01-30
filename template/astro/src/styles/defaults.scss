@@ -19,6 +19,12 @@ img {
   width: 100%;
 }
 
+.page-wrapper {
+  max-width: 125rem;
+  margin: 0 auto;
+  background: inherit;
+}
+
 
 ::-webkit-scrollbar {
   display: none;

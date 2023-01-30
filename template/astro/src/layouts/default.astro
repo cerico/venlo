@@ -22,8 +22,10 @@ import data from '../files/prepare.js'
     init(data)
   </script> 
   <body class="">
-    <Header />
-    <slot />
+    <div class="page-wrapper">
+      <Header />
+      <slot />
+    </div>
     <script is:inline src="/files/drawer.js" />
   </body>
 </html>
