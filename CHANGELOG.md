@@ -1,5 +1,9 @@
 # 2023
 
+## [1.0.40] - February 2
+### Updated
+- Move chosen design to index.astro instead of copying
+
 ## [1.0.39] - January 30
 ### Updated
 - Add typology layout with fonts

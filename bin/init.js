@@ -139,8 +139,7 @@ var main = async () => {
     await fs.copyFile(py,py2);
     await fs.copyFile(js,js2);
   }
-  const chosenDesign = `${srcDir}/src/pages/${design}.astro`
-  await fs.copyFile(chosenDesign,`${projectDir}/src/pages/index.astro`);
+  await fs.rename(`${projectDir}/src/pages/${design}.astro`,`${projectDir}/src/pages/index.astro`);
   const pkgJson = await fs.readJSON(path.join(projectDir, "package.json"));
   pkgJson.name = appName;
   await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
