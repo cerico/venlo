@@ -159,7 +159,7 @@ var main = async () => {
   });
   const gitUserCmd = "git config --get user.name"
   const gitUser = await execa(gitUserCmd);
-  const repo = `\nrepo:\n\tgh repo create ${appName} --private\n\tgit remote add origin git@github.com:${gitUser.stdout.trim()}/${appName}.git`
+  const repo = `\nrepo:\n\tgh repo create ${appName} --public\n\tgit remote add origin git@github.com:${gitUser.stdout.trim()}/${appName}.git`
   fs.appendFile(path.join(projectDir, "Makefile"), repo)
   spinner.succeed(`${chalk.cyan.bold(appName)} scaffolded successfully!`);
   const spinner3 = ora2('Installing packages');
@@ -171,7 +171,7 @@ var main = async () => {
   spinner2.start();
   const gistCmd = "node gist.js"
   await execa(gistCmd, { cwd: projectDir });
-  const initCmd = "git init; git add .; git commit -m init";
+  const initCmd = "git init; git add .; git commit -m 'feat: initialized repo'";
   await execa(initCmd, { cwd: projectDir });
   spinner2.succeed(`${chalk.cyan.bold(appName)} git repo created!`);
   logger.info("Next steps:");
