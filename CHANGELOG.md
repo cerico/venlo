@@ -1,65 +1,23 @@
-# 2023
+# [1.1.0](https://github.com/cerico/venlo/compare/v1.0.39...v1.1.0) (2023-02-07)
 
-## [1.0.40] - February 2
-### Updated
-- Move chosen design to index.astro instead of copying
 
-## [1.0.39] - January 30
-### Updated
-- Add typology layout with fonts
+### Bug Fixes
 
-## [1.0.38] - January 30
-### Updated
-- Add max-widths for page wrappers and for articles
+* adding conventional commits to main repo ([d04fe4c](https://github.com/cerico/venlo/commit/d04fe4cbf2a72e37c354264711e9d6550444ea9f))
+* update todo to test github workflow ([c0aa27a](https://github.com/cerico/venlo/commit/c0aa27a3d15593919f98ba932981b7919ecd5eaa))
 
-## [1.0.37] - January 28
-### Updated
-- In gist view create latest sample post with current date
-- Bugfix in Default view importing wrong layout
-- Max-width of 70rem added to global paragraph tag 
 
-## [1.0.36] - January 28
-### Updated
-- Astro to v2
+### Features
 
-## [1.0.35] - January 25
-### Added
-- Ability to choose which design will be index
+* add conventional commits action to generated apps ([6287f60](https://github.com/cerico/venlo/commit/6287f609676556b71189bdb2695ec008b1b38bb4))
 
-## [1.0.34] - January 20
-### Added
-- Blank page view
 
-## [1.0.33] - January 20
-### Added
-- Scrolling picture view
 
-## [1.0.32] - January 14
-### Added
-- MDX
-- gists view
+## [1.0.39](https://github.com/cerico/venlo/compare/v1.0.37...v1.0.39) (2023-01-30)
 
-## [1.0.31] - January 13
-### Added
-- Default github actions
-- Preview command added to Makefile
 
-## [1.0.30] - January 12
-### Changed
-- Mobile version viewport changes
-- Astro version to 1.6.10
 
-### Removed
-- Subfont
+## [1.0.37](https://github.com/cerico/venlo/compare/v1.0.36...v1.0.37) (2023-01-30)
 
-## [1.0.29] - January 11
-### Added
-- Auto deploy on main branch
 
-## [1.0.28] - January 11
-### Added
-- Auto deploy on action branch 
 
-## [1.0.27] - January 11
-### Added
-- Booklet layout
