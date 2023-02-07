@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/cerico/venlo/compare/v1.1.0...v1.1.1) (2023-02-07)
+
+
+### Bug Fixes
+
+* change initial commit message ([c02a6d2](https://github.com/cerico/venlo/commit/c02a6d235b2fcd4496aa4d6da09543c9caa8a8be))
+
+
+
 # [1.1.0](https://github.com/cerico/venlo/compare/v1.0.39...v1.1.0) (2023-02-07)
 
 
