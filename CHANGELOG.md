@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/cerico/venlo/compare/v1.2.0...v1.2.1) (2023-03-09)
+
+
+### Bug Fixes
+
+* update debug stylesheet ([5a54c13](https://github.com/cerico/venlo/commit/5a54c138f6335b846f3c73225018c89b7aa59f74))
+
+
+
 # [1.2.0](https://github.com/cerico/venlo/compare/v1.1.1...v1.2.0) (2023-03-09)
 
 
@@ -37,10 +46,6 @@
 
 
 ## [1.0.39](https://github.com/cerico/venlo/compare/v1.0.37...v1.0.39) (2023-01-30)
-
-
-
-## [1.0.37](https://github.com/cerico/venlo/compare/v1.0.36...v1.0.37) (2023-01-30)
 
 
 
