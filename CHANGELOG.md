@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/cerico/venlo/compare/v1.1.1...v1.2.0) (2023-03-09)
+
+
+### Bug Fixes
+
+* update package-lock to latest ([da65582](https://github.com/cerico/venlo/commit/da65582db8b9ca2d1e80bb1031361a8aedf4a312))
+
+
+### Features
+
+* add debug stylesheet and command to turn on/off ([c6bc7f8](https://github.com/cerico/venlo/commit/c6bc7f82ad72713e92a8382ed68a796fe272c190))
+
+
+
 ## [1.1.1](https://github.com/cerico/venlo/compare/v1.1.0...v1.1.1) (2023-02-07)
 
 
