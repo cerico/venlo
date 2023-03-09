@@ -6,3 +6,7 @@ netlify:
 	netlify init
 gist:
 	node gist.js
+debugcss:
+	sed -i "" -e s/^\\/\\/\ \\@use\ \'debug\'\;/\\@use\ \'debug\'\;/g src/styles/defaults.scss
+undebugcss:
+	sed -i "" -e s/^\\@use\ \'debug\'\;/\\/\\/\ \\@use\ \'debug\'\;/g src/styles/defaults.scss
