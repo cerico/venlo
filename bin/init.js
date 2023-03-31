@@ -73,7 +73,7 @@ var runCli = async () => {
     type: "list",
     message: "Will you be using Astro or Next?",
     choices: [
-      { name: "astro", value: "astro", short: "astro" }, 
+      { name: "astro", value: "astro", short: "astro" },
       { name: "next", value: "next", short: "next" },
     ],
     default: "astro",
@@ -84,7 +84,7 @@ var runCli = async () => {
       type: "list",
       message: "How will you be handling json?",
       choices: [
-        { name: "node", value: "node", short: "node" }, 
+        { name: "node", value: "node", short: "node" },
         { name: "python", value: "python", short: "python" },
       ],
       default: "node",
@@ -111,12 +111,22 @@ var runCli = async () => {
 
 var main = async () => {
   renderTitle();
-  const {
-    appName,
-    language,
-    packages,
-    design
-  } = await runCli();
+  let appName, language, packages, design
+  const args = process.argv.slice(2, process.argv.length)
+  if (args.filter((a) => a.startsWith("-")).length > 0) {
+    appName = args.filter((a) => !a.startsWith("-"))[0] || "created-by-venlo"
+    language = args
+        .filter((a) => !a.startsWith("-"))
+        .filter((a) => ["astro", "next"].includes(a))[0] || "astro"
+    packages = args
+        .filter((a) => !a.startsWith("-"))
+        .filter((a) => ["node", "python"].includes(a))[0] || "node"
+    design = args
+        .filter((a) => !a.startsWith("-"))
+        .filter((a) => ["blank", "default", "gists", "scroll", "booklet"].includes(a))[0] || "default"
+  } else {
+    ({ appName, language, packages, design } = await runCli())
+  }
   const projectDir = path.resolve(process.cwd(), appName);
   const languages = {
     next: 'template/next',
@@ -152,7 +162,7 @@ var main = async () => {
     }
     const newTitle = appName.charAt(0).toUpperCase() + appName.slice(1);
     const replaced = contents.replace(/title/g, newTitle);
-  
+
     fs.writeFile(path.join(projectDir, "README.md"), replaced, 'utf-8', function (err) {
       console.log(err);
     });
