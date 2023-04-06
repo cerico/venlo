@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/docs.astro";
+
+export async function getStaticPaths() {
+  const docs = await getCollection("top");
+  const routes = docs.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+  const index = {
+    params: { slug: undefined },
+    props: { entry: docs.filter((entry) => entry.slug === 'index')[0] },
+  }
+  return [ ...routes, index ]
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<Layout>
+  <Content />
+</Layout>
