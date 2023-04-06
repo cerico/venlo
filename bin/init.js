@@ -100,6 +100,7 @@ var runCli = async () => {
         { name: "gists", value: "gists", short: "gists" },
         { name: "scroll", value: "scroll", short: "scroll" },
         { name: "booklet", value: "booklet", short: "booklet" },
+        { name: "documentation", value: "documentation", short: "documentation" },
       ],
       default: "default",
     });
@@ -123,7 +124,7 @@ var main = async () => {
         .filter((a) => ["node", "python"].includes(a))[0] || "node"
     design = args
         .filter((a) => !a.startsWith("-"))
-        .filter((a) => ["blank", "default", "gists", "scroll", "booklet"].includes(a))[0] || "default"
+        .filter((a) => ["blank", "default", "gists", "scroll", "booklet", "documentation"].includes(a))[0] || "default"
   } else {
     ({ appName, language, packages, design } = await runCli())
   }
@@ -149,7 +150,9 @@ var main = async () => {
     await fs.copyFile(py,py2);
     await fs.copyFile(js,js2);
   }
-  await fs.rename(`${projectDir}/src/pages/${design}.astro`,`${projectDir}/src/pages/index.astro`);
+  if (design !== 'documentation') {
+    await fs.rename(`${projectDir}/src/pages/${design}.astro`,`${projectDir}/src/pages/index.astro`);
+  }
   const pkgJson = await fs.readJSON(path.join(projectDir, "package.json"));
   pkgJson.name = appName;
   await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
