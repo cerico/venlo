@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/cerico/venlo/compare/v1.4.0...v1.5.0) (2023-04-06)
+
+
+### Features
+
+* add new documentation design option ([4cfc106](https://github.com/cerico/venlo/commit/4cfc106ce3597804bc3bc8472f2666975886d5c6))
+
+
+
 # [1.4.0](https://github.com/cerico/venlo/compare/v1.3.0...v1.4.0) (2023-03-31)
 
 
@@ -42,15 +51,6 @@
 ### Features
 
 * add debug stylesheet and command to turn on/off ([c6bc7f8](https://github.com/cerico/venlo/commit/c6bc7f82ad72713e92a8382ed68a796fe272c190))
-
-
-
-## [1.1.1](https://github.com/cerico/venlo/compare/v1.1.0...v1.1.1) (2023-02-07)
-
-
-### Bug Fixes
-
-* change initial commit message ([c02a6d2](https://github.com/cerico/venlo/commit/c02a6d235b2fcd4496aa4d6da09543c9caa8a8be))
 
 
 
