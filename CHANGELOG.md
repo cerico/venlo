@@ -1,3 +1,12 @@
+## [1.5.1](https://github.com/cerico/venlo/compare/v1.5.0...v1.5.1) (2023-04-06)
+
+
+### Bug Fixes
+
+* add missing content/docs dir ([d0015e6](https://github.com/cerico/venlo/commit/d0015e6996639db1d2bbcb74561cda7826bb3856))
+
+
+
 # [1.5.0](https://github.com/cerico/venlo/compare/v1.4.0...v1.5.0) (2023-04-06)
 
 
@@ -37,20 +46,6 @@
 ### Bug Fixes
 
 * update debug stylesheet ([5a54c13](https://github.com/cerico/venlo/commit/5a54c138f6335b846f3c73225018c89b7aa59f74))
-
-
-
-# [1.2.0](https://github.com/cerico/venlo/compare/v1.1.1...v1.2.0) (2023-03-09)
-
-
-### Bug Fixes
-
-* update package-lock to latest ([da65582](https://github.com/cerico/venlo/commit/da65582db8b9ca2d1e80bb1031361a8aedf4a312))
-
-
-### Features
-
-* add debug stylesheet and command to turn on/off ([c6bc7f8](https://github.com/cerico/venlo/commit/c6bc7f82ad72713e92a8382ed68a796fe272c190))
 
 
 
