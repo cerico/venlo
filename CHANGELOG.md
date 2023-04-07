@@ -1,3 +1,12 @@
+# [1.7.0](https://github.com/cerico/venlo/compare/v1.6.1...v1.7.0) (2023-04-07)
+
+
+### Features
+
+* Make page title dynamic ([259c909](https://github.com/cerico/venlo/commit/259c909d7299cab8cda31ce949837a58f84d69b2))
+
+
+
 ## [1.6.1](https://github.com/cerico/venlo/compare/v1.6.0...v1.6.1) (2023-04-07)
 
 
@@ -32,15 +41,6 @@
 ### Features
 
 * add new documentation design option ([4cfc106](https://github.com/cerico/venlo/commit/4cfc106ce3597804bc3bc8472f2666975886d5c6))
-
-
-
-# [1.4.0](https://github.com/cerico/venlo/compare/v1.3.0...v1.4.0) (2023-03-31)
-
-
-### Features
-
-* add defaults to generate ([6086f75](https://github.com/cerico/venlo/commit/6086f75d37cc7f3dc9e5745fd0d54f54cd50b3e7))
 
 
 
