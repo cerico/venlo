@@ -158,6 +158,18 @@ var main = async () => {
   await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
     spaces: 2
   });
+  fs.readFile(path.join(projectDir, `src/layouts/${design}.astro`), 'utf-8', function (err, contents) {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    const newTitle = appName.charAt(0).toUpperCase() + appName.slice(1);
+    const replaced = contents.replace(/Page Title/g, newTitle);
+
+    fs.writeFile(path.join(projectDir, `src/layouts/${design}.astro`), replaced, 'utf-8', function (err) {
+      console.log(err);
+    });
+  });
   fs.readFile(path.join(projectDir, "README.md"), 'utf-8', function (err, contents) {
     if (err) {
       console.log(err);
