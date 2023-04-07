@@ -1,3 +1,13 @@
+## [1.6.1](https://github.com/cerico/venlo/compare/v1.6.0...v1.6.1) (2023-04-07)
+
+
+### Bug Fixes
+
+* improve styles for changelog/readme in docsite design ([79a5bdc](https://github.com/cerico/venlo/commit/79a5bdc4834133be0352fc67fa2e6bec77bdb173)), closes [#0079b1](https://github.com/cerico/venlo/issues/0079b1)
+* remove todo file ([f61ebe1](https://github.com/cerico/venlo/commit/f61ebe1daad5550df8ac655aced7ab94ed393e2c))
+
+
+
 # [1.6.0](https://github.com/cerico/venlo/compare/v1.5.1...v1.6.0) (2023-04-07)
 
 
@@ -31,21 +41,6 @@
 ### Features
 
 * add defaults to generate ([6086f75](https://github.com/cerico/venlo/commit/6086f75d37cc7f3dc9e5745fd0d54f54cd50b3e7))
-
-
-
-# [1.3.0](https://github.com/cerico/venlo/compare/v1.2.1...v1.3.0) (2023-03-27)
-
-
-### Bug Fixes
-
-* add tldr command to makefile ([550be67](https://github.com/cerico/venlo/commit/550be675e958f01b001882996db57661cf6ded78))
-* remove push commmand from makefile, no longer needed ([2241841](https://github.com/cerico/venlo/commit/2241841c0ffb7f3cbf7105e95305923df68c26c9))
-
-
-### Features
-
-* add tldr commands to generated makefiles ([8361948](https://github.com/cerico/venlo/commit/8361948eb6213c44500a0cc9c638afd1732aac50))
 
 
 
