@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/cerico/venlo/compare/v1.5.1...v1.6.0) (2023-04-07)
+
+
+### Features
+
+* update docs stylesheet to inherit from default ([1b0dbf0](https://github.com/cerico/venlo/commit/1b0dbf03667ea90ec8f6d033ce78ad9504883b4b))
+
+
+
 ## [1.5.1](https://github.com/cerico/venlo/compare/v1.5.0...v1.5.1) (2023-04-06)
 
 
@@ -37,15 +46,6 @@
 ### Features
 
 * add tldr commands to generated makefiles ([8361948](https://github.com/cerico/venlo/commit/8361948eb6213c44500a0cc9c638afd1732aac50))
-
-
-
-## [1.2.1](https://github.com/cerico/venlo/compare/v1.2.0...v1.2.1) (2023-03-09)
-
-
-### Bug Fixes
-
-* update debug stylesheet ([5a54c13](https://github.com/cerico/venlo/commit/5a54c138f6335b846f3c73225018c89b7aa59f74))
 
 
 
