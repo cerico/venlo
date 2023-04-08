@@ -1,3 +1,17 @@
+# [1.8.0](https://github.com/cerico/venlo/compare/v1.7.0...v1.8.0) (2023-04-08)
+
+
+### Bug Fixes
+
+* add Make target to add deploy key ([bd48cb7](https://github.com/cerico/venlo/commit/bd48cb7042c8fd95326a9e16593b93cdbeee9d4c))
+
+
+### Features
+
+* deploy changelog-readme site to venlo.io37.ch in gh action ([8002166](https://github.com/cerico/venlo/commit/8002166c74a1c75fb7df304510a94ddbde4330c8))
+
+
+
 # [1.7.0](https://github.com/cerico/venlo/compare/v1.6.1...v1.7.0) (2023-04-07)
 
 
@@ -32,15 +46,6 @@
 ### Bug Fixes
 
 * add missing content/docs dir ([d0015e6](https://github.com/cerico/venlo/commit/d0015e6996639db1d2bbcb74561cda7826bb3856))
-
-
-
-# [1.5.0](https://github.com/cerico/venlo/compare/v1.4.0...v1.5.0) (2023-04-06)
-
-
-### Features
-
-* add new documentation design option ([4cfc106](https://github.com/cerico/venlo/commit/4cfc106ce3597804bc3bc8472f2666975886d5c6))
 
 
 
