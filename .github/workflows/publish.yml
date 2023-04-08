@@ -18,6 +18,7 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3.7.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          release-count: "0"
 
       - name: Print the changelog
         run: echo "${{ steps.changelog.outputs.tag }}"
