@@ -1,3 +1,12 @@
+## [1.8.3](https://github.com/cerico/venlo/compare/v1.8.2...v1.8.3) (2023-04-08)
+
+
+### Bug Fixes
+
+* 404 page to default to readme layout ([6d7e03e](https://github.com/cerico/venlo/commit/6d7e03eb8d31b51d7516def221b4faa9ca7b5899))
+
+
+
 ## [1.8.2](https://github.com/cerico/venlo/compare/v1.8.1...v1.8.2) (2023-04-08)
 
 
