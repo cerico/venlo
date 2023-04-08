@@ -9,3 +9,5 @@ gh:
 	@echo $(NPM_TOKEN) > npm
 	gh secret set NPM_TOKEN < npm
 	rm npm
+deploy_key:
+	gh secret set DEPLOY_KEY < ~/.ssh/kawajevo/deploy_rsa
