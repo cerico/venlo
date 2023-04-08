@@ -1,3 +1,12 @@
+## [1.8.4](https://github.com/cerico/venlo/compare/v1.8.3...v1.8.4) (2023-04-08)
+
+
+### Bug Fixes
+
+* github action to use readme layout when deploying ([5c17a2c](https://github.com/cerico/venlo/commit/5c17a2c10536636cf2647bbc55200e50a0b0419a))
+
+
+
 ## [1.8.3](https://github.com/cerico/venlo/compare/v1.8.2...v1.8.3) (2023-04-08)
 
 
