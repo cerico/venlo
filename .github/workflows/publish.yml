@@ -54,7 +54,7 @@ jobs:
         run: cat ~/.gitconfig
 
       - name: installs the site
-        run: npm_config_yes=true npx venlo@latest --default site documentation
+        run: npm_config_yes=true npx venlo@latest --default site readme
 
       - name: empties template pages
         run: rm -rf site/src/pages/[a-z]*.astro
