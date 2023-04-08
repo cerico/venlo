@@ -1,3 +1,12 @@
+## [1.8.2](https://github.com/cerico/venlo/compare/v1.8.1...v1.8.2) (2023-04-08)
+
+
+### Bug Fixes
+
+* rename documentation to readme ([0f44784](https://github.com/cerico/venlo/commit/0f447846b84b33431bc6540c138d239913559711))
+
+
+
 ## [1.8.1](https://github.com/cerico/venlo/compare/v1.8.0...v1.8.1) (2023-04-08)
 
 
