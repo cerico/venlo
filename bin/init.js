@@ -150,9 +150,9 @@ var main = async () => {
     await fs.copyFile(py,py2);
     await fs.copyFile(js,js2);
   }
-  if (design !== 'readme') {
-    await fs.rename(`${projectDir}/src/pages/${design}.astro`,`${projectDir}/src/pages/index.astro`);
-  }
+  const designsDir = path.join(projectDir, `src/designs/${design}`)
+  const indexDir = path.join(projectDir, "src/pages")
+  await fs.copy(designsDir, indexDir);
   const pkgJson = await fs.readJSON(path.join(projectDir, "package.json"));
   pkgJson.name = appName;
   await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
@@ -198,8 +198,10 @@ var main = async () => {
   spinner3.succeed(`${chalk.cyan.bold(appName)} packages installed!`);
   const spinner2 = ora2('Initializing git repo');
   spinner2.start();
-  const gistCmd = "node gist.js"
-  await execa(gistCmd, { cwd: projectDir });
+  if (design == 'gists') {
+    const gistCmd = "node gist.js"
+    await execa(gistCmd, { cwd: projectDir });
+  }
   const initCmd = "git init; git add .; git commit -m 'feat: initialized repo'";
   await execa(initCmd, { cwd: projectDir });
   spinner2.succeed(`${chalk.cyan.bold(appName)} git repo created!`);
