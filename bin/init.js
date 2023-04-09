@@ -182,9 +182,7 @@ var main = async () => {
       console.log(err);
     });
   });
-  const gitUserCmd = "git config --get user.name"
-  const gitUser = await execa(gitUserCmd);
-  const repo = `\nrepo:\n\tgh repo create ${appName} --public\n\tgit remote add origin git@github.com:${gitUser.stdout.trim()}/${appName}.git`
+  const repo = `\nrepo:\n\tgh repo create ${appName} --public --source=. --remote=upstream`
   fs.appendFile(path.join(projectDir, "Makefile"), repo)
   spinner.succeed(`${chalk.cyan.bold(appName)} scaffolded successfully!`);
   const spinner3 = ora2('Installing packages');
