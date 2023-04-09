@@ -56,9 +56,6 @@ jobs:
       - name: installs the site
         run: npm_config_yes=true npx venlo@latest --default venlo readme
 
-      - name: empties template pages
-        run: rm -rf venlo/src/pages/[a-z]*.astro
-
       - name: copies top level mds
         run: for f in *.md; do cp "$f" "venlo/src/content/top/$(echo "$f" | tr '[:upper:]' '[:lower:]' )"; done
 
