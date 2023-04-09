@@ -1,3 +1,14 @@
+## [1.8.6](https://github.com/cerico/venlo/compare/v1.8.5...v1.8.6) (2023-04-09)
+
+
+### Bug Fixes
+
+* move designs into own dirs ([edb588a](https://github.com/cerico/venlo/commit/edb588afaf4f419515d4dc888378e201fd985de7))
+* only print error if one exists when writing out new file ([bad54a4](https://github.com/cerico/venlo/commit/bad54a422b20daf3ad211582a0a00a580433043d))
+* use gh to set up new repo ([9c94f34](https://github.com/cerico/venlo/commit/9c94f34f56978886315d41e67cafa2a38708d888))
+
+
+
 ## [1.8.5](https://github.com/cerico/venlo/compare/v1.8.4...v1.8.5) (2023-04-09)
 
 
