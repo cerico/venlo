@@ -167,7 +167,10 @@ var main = async () => {
     const replaced = contents.replace(/Page Title/g, newTitle);
 
     fs.writeFile(path.join(projectDir, `src/layouts/${design}.astro`), replaced, 'utf-8', function (err) {
-      console.log(err);
+      if (err) {
+        console.log(err);
+        return;
+      }
     });
   });
   fs.readFile(path.join(projectDir, "README.md"), 'utf-8', function (err, contents) {
@@ -179,7 +182,10 @@ var main = async () => {
     const replaced = contents.replace(/title/g, newTitle);
 
     fs.writeFile(path.join(projectDir, "README.md"), replaced, 'utf-8', function (err) {
-      console.log(err);
+      if (err) {
+        console.log(err);
+        return;
+      }
     });
   });
   const repo = `\nrepo:\n\tgh repo create ${appName} --public --source=. --remote=upstream`
