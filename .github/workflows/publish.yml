@@ -54,25 +54,25 @@ jobs:
         run: cat ~/.gitconfig
 
       - name: installs the site
-        run: npm_config_yes=true npx venlo@latest --default site readme
+        run: npm_config_yes=true npx venlo@latest --default venlo readme
 
       - name: empties template pages
-        run: rm -rf site/src/pages/[a-z]*.astro
+        run: rm -rf venlo/src/pages/[a-z]*.astro
 
       - name: copies top level mds
-        run: for f in *.md; do cp "$f" "site/src/content/top/$(echo "$f" | tr '[:upper:]' '[:lower:]' )"; done
+        run: for f in *.md; do cp "$f" "venlo/src/content/top/$(echo "$f" | tr '[:upper:]' '[:lower:]' )"; done
 
       - name: copies top readme to index
-        run: cp README.md site/src/content/top/index.md
+        run: cp README.md venlo/src/content/top/index.md
 
       - name: Build
-        run: cd site && make build
+        run: cd venlo && make build
 
       - name: Rsync
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -a
-          path: site/dist/
+          path: venlo/dist/
           remote_path: "/var/www/html/venlo.io37.ch"
           remote_host: venlo.io37.ch
           remote_user: deploy
