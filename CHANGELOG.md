@@ -1,3 +1,14 @@
+## [1.8.5](https://github.com/cerico/venlo/compare/v1.8.4...v1.8.5) (2023-04-09)
+
+
+### Bug Fixes
+
+* add default padding and line-height for pre ([0393818](https://github.com/cerico/venlo/commit/0393818286d3983218743c9d8089edd0297d3265))
+* add sample content to readme/changelog mds on init ([79169a5](https://github.com/cerico/venlo/commit/79169a5ad2e81f08513a53f5a5eb3b7d5c80de77))
+* remove default colors from code ([24f63da](https://github.com/cerico/venlo/commit/24f63da6f9dcb53da7d14de320856c43783b6a59))
+
+
+
 ## [1.8.4](https://github.com/cerico/venlo/compare/v1.8.3...v1.8.4) (2023-04-08)
 
 
