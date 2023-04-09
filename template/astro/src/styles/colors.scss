@@ -58,12 +58,10 @@ body {
   @media (prefers-color-scheme: light) {
     --fg: var(--black);
     --bg: var(--white);
-    code { background: var(--dark); color: var(--color-light) }
   }
   @media (prefers-color-scheme: dark) {
     --fg: var(--white);
     --bg: var(--black);
-    code { background: var(--paper); color: var(--dark) }
   }
 }
 
