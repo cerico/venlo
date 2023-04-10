@@ -19,5 +19,9 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 <Layout>
-  <Content />
+  <main>
+    <section class={entry.slug === "changelog" ? "container changelog" : "container readme"}>
+      <Content />
+    </section>
+  </main>
 </Layout>

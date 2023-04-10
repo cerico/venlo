@@ -26,11 +26,7 @@ const currentPath = pathname.slice(1);
   <body class="docs">
     <div class="page-wrapper">
       <Header />
-      <main>
-        <section class={currentPath === "changelog" ? "container changelog" : "container readme"}>
-          <slot />
-        </section>
-      </main>
+      <slot />
     </div>
     <script is:inline src="/files/drawer.js" />
   </body>
