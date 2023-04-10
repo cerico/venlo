@@ -1,3 +1,18 @@
+# [1.9.0](https://github.com/cerico/venlo/compare/v1.8.6...v1.9.0) (2023-04-10)
+
+
+### Bug Fixes
+
+* dont clear out the gh action created astro pages ([4afc6e1](https://github.com/cerico/venlo/commit/4afc6e137c5f13db450e37e1689f3961b7625495))
+* rename the gh-action astro created sitefolder to venlo ([4592891](https://github.com/cerico/venlo/commit/4592891ac444555b12247cf2da6fefa713fc0f7f))
+
+
+### Features
+
+* create 404 pages per design template ([cde6e65](https://github.com/cerico/venlo/commit/cde6e65f744f2425c0319cd6b3f2aa12c3a26f59))
+
+
+
 ## [1.8.6](https://github.com/cerico/venlo/compare/v1.8.5...v1.8.6) (2023-04-09)
 
 
