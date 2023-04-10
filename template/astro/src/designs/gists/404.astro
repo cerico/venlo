@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/gists.astro'
+const id = '404'
+const d = new Date().toLocaleDateString("en-GB",{day: 'numeric', month:'short', year: 'numeric'})
+---
+<Layout>
+  <article>
+    <div class="wrapper" id={id}>
+      <div class="box almere">
+        <span class="num">{id}</span>
+      </div>
+      <div class="box bremen"></div>
+      <div class="box charleroi">
+        {d}
+      </div>
+    </div>
+    <div class="entry">
+      <div class="copy">
+        <section class="container">
+          <h1 class="title">
+            Page Not Found.<br/>
+          </h1>
+          <p class="subtitle">
+              This page does not exist
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>
+</Layout>
