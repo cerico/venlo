@@ -1,3 +1,12 @@
+## [1.9.1](https://github.com/cerico/venlo/compare/v1.9.0...v1.9.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* show design choice in terminal when scaffolding ([a56387f](https://github.com/cerico/venlo/commit/a56387f52b9708cfdfc3eded4792d0fd8cc58ed5))
+
+
+
 # [1.9.0](https://github.com/cerico/venlo/compare/v1.8.6...v1.9.0) (2023-04-10)
 
 
