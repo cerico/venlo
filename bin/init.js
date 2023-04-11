@@ -26,6 +26,9 @@ var logger = {
   },
   success(...args) {
     console.log(chalk.green(...args));
+  },
+  steps(...args) {
+    console.log(chalk.white.bold(...args));
   }
 };
 
@@ -205,9 +208,10 @@ var main = async () => {
   const initCmd = "git init; git add .; git commit -m 'feat: initialized repo'";
   await execa(initCmd, { cwd: projectDir });
   spinner2.succeed(`${chalk.cyan.bold(appName)} git repo created!`);
-  logger.info("Next steps:");
-  logger.info(`  cd ${appName}`);
-  logger.info(`  make start`);
+  logger.info(`✔ ${chalk.cyan.bold(appName)} ${chalk.green.bold(language)} ${chalk.white('app created')} ${design ? `${chalk.white('using')} ${chalk.green.bold(design)} ${chalk.white('design')}` : ''}`);
+  logger.steps("Next steps:");
+  logger.steps(`  cd ${appName}`);
+  logger.steps(`  make start`);
 }
 
 main().catch((err) => {
