@@ -1,3 +1,12 @@
+## [1.9.2](https://github.com/cerico/venlo/compare/v1.9.1...v1.9.2) (2023-05-06)
+
+
+### Bug Fixes
+
+* improve tldr target in makefile ([bbe878b](https://github.com/cerico/venlo/commit/bbe878b9cfa27149d26e4ef62f1bef3ed6a84627))
+
+
+
 ## [1.9.1](https://github.com/cerico/venlo/compare/v1.9.0...v1.9.1) (2023-04-11)
 
 
