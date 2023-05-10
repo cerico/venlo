@@ -1,3 +1,12 @@
+## [1.9.3](https://github.com/cerico/venlo/compare/v1.9.2...v1.9.3) (2023-05-10)
+
+
+### Bug Fixes
+
+* add .astro and src/env.d.ts to gitignore ([b00b7cc](https://github.com/cerico/venlo/commit/b00b7ccaa1172403a5f5e487918c0d59a2766fdb))
+
+
+
 ## [1.9.2](https://github.com/cerico/venlo/compare/v1.9.1...v1.9.2) (2023-05-06)
 
 
