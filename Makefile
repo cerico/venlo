@@ -2,7 +2,7 @@ NPM_TOKEN=$(shell awk -F'=' '{print $$2}' ~/.npmrc)
 tldr:
 	@echo Available commands
 	@echo ------------------
-	@for i in `grep -v "\t" Makefile | grep "a*:" | awk -F ":" '{print $$1}'`; do echo make $$i; done
+	@for i in `grep '^[[:alpha:]]*:' Makefile | awk -F ":" '{print $$1}'`; do echo make $$i; done
 generate:
 	./bin/init.js
 gh:
