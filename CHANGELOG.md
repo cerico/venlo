@@ -1,3 +1,12 @@
+## [1.9.4](https://github.com/cerico/venlo/compare/v1.9.3...v1.9.4) (2023-05-20)
+
+
+### Bug Fixes
+
+* grep for rules correctly in makefile tldr ([f0a6853](https://github.com/cerico/venlo/commit/f0a6853726a44f487e6dade78cc8a44de65b9698))
+
+
+
 ## [1.9.3](https://github.com/cerico/venlo/compare/v1.9.2...v1.9.3) (2023-05-10)
 
 
