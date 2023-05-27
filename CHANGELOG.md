@@ -1,3 +1,12 @@
+## [1.9.5](https://github.com/cerico/venlo/compare/v1.9.4...v1.9.5) (2023-05-27)
+
+
+### Bug Fixes
+
+* update conventional changelog actions ([e80b4f7](https://github.com/cerico/venlo/commit/e80b4f70993532a84cfc26cfba5db0b54d8d0d02))
+
+
+
 ## [1.9.4](https://github.com/cerico/venlo/compare/v1.9.3...v1.9.4) (2023-05-20)
 
 
