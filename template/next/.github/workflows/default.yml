@@ -1,16 +1,35 @@
-name: Default github action 
+name: Release
+permissions:
+  contents: write
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main
+
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - name: conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3
         with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
-      - run: echo 'github action working correctly'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          release-count: "0"
+
+      - name: Print the changelog
+        run: echo "${{ steps.changelog.outputs.tag }}"
+
+      - name: Print the changelog
+        run: echo "${{ steps.changelog.outputs.version }}"
+
+      - name: Print the changelog
+        run: echo "${{ steps.changelog.outputs.clean_changelog }}" > notes.text
+
+      - name: Create Release
+        run: gh release create ${{ steps.changelog.outputs.tag  }} --notes-file notes.text
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
