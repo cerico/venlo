@@ -1,3 +1,12 @@
+# [1.10.0](https://github.com/cerico/venlo/compare/v1.9.5...v1.10.0) (2023-05-28)
+
+
+### Features
+
+* add arguments to node gist ([8b9dbdc](https://github.com/cerico/venlo/commit/8b9dbdcf57d6d5f2980cb32c260c5c4c20371712))
+
+
+
 ## [1.9.5](https://github.com/cerico/venlo/compare/v1.9.4...v1.9.5) (2023-05-27)
 
 
