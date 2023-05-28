@@ -1,20 +1,21 @@
 const fs = require("fs")
 const now = new Date().toDateString();
 const iso = new Date().toISOString()
+const title = process.argv[2] || 'Hello world'
 const displayDate = (new Date()).toLocaleDateString("en-GB",{day: 'numeric', month:'short'});
 const md = `---
-title: Hello world
+title: ${title}
 author: ''
 publishDate: ${now}
 displayDate: ${displayDate}
 cover: https://i.ibb.co/swkd4P2/ccc.jpg
-description: hello world example
+description: ${title}
 tags:
   - bluey
   - yellow
 ---
 
-## Hello world
+## ${title}
 
 Here is a starter post with an example codeblock.
 
