@@ -1,0 +1,34 @@
+name: Test
+on:        
+  push:
+    branches-ignore:
+      - main
+      
+jobs:
+  macbook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: make a gitconfig
+        run: |
+          echo -e "[user]
+            name = github-runner
+            email = githubrunner@io37.ch
+          " > ~/.gitconfig
+
+      - name: is gitconfig there
+        run: cat ~/.gitconfig
+
+      - name: installs the site
+        run: npm_config_yes=true npx venlo@latest --default venlo readme
+
+      - name: copies top level mds
+        run: for f in *.md; do cp "$f" "venlo/src/content/top/$(echo "$f" | tr '[:upper:]' '[:lower:]')"; done
+
+      - name: copies top readme to index
+        run: cp README.md venlo/src/content/top/index.md
+
+      - name: Build
+        run: cd venlo && make build
+
