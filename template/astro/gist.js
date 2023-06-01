@@ -1,6 +1,6 @@
 const fs = require("fs")
 const now = new Date().toDateString();
-const iso = new Date().toISOString()
+const iso = new Date().toISOString().replaceAll(':','-')
 const title = process.argv[2] || 'Hello world'
 const displayDate = (new Date()).toLocaleDateString("en-GB",{day: 'numeric', month:'short'});
 const md = `---
