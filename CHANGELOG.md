@@ -1,3 +1,12 @@
+## [1.10.1](https://github.com/cerico/venlo/compare/v1.10.0...v1.10.1) (2023-06-01)
+
+
+### Bug Fixes
+
+* update gist command to remove colons ([666f7a1](https://github.com/cerico/venlo/commit/666f7a11df3b65376bc92b8078b7ca2a2d5ed417))
+
+
+
 # [1.10.0](https://github.com/cerico/venlo/compare/v1.9.5...v1.10.0) (2023-05-28)
 
 
