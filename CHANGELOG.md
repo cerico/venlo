@@ -1,3 +1,12 @@
+## [1.10.2](https://github.com/cerico/venlo/compare/v1.10.1...v1.10.2) (2023-06-26)
+
+
+### Bug Fixes
+
+* add test for build target ([d8e665e](https://github.com/cerico/venlo/commit/d8e665e1a4d3baa6d7bcd5bd63ce69c2ca602025))
+
+
+
 ## [1.10.1](https://github.com/cerico/venlo/compare/v1.10.0...v1.10.1) (2023-06-01)
 
 
