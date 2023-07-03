@@ -10,27 +10,11 @@ import path from "path"
 import { fileURLToPath } from "url"
 import figlet from "figlet"
 import gradient from "gradient-string"
+import { logger } from "./logger.js"
 var execa = promisify(exec)
 var __filename = fileURLToPath(import.meta.url)
 var distPath = path.dirname(__filename)
 var PKG_ROOT = path.join(distPath, "../")
-var logger = {
-  error(...args) {
-    console.log(chalk.red(...args))
-  },
-  warn(...args) {
-    console.log(chalk.yellow(...args))
-  },
-  info(...args) {
-    console.log(chalk.cyan(...args))
-  },
-  success(...args) {
-    console.log(chalk.green(...args))
-  },
-  steps(...args) {
-    console.log(chalk.white.bold(...args))
-  }
-}
 
 var poimandresTheme = {
   blue: "#FF757D",
