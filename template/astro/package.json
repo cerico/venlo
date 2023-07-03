@@ -6,7 +6,10 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build && node generate-hashes",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test:cucumber": "cucumber-js tests/cucumber/features",
+    "test:playwright": "playwright test tests/playwright/",
+    "test:vitest": "vitest vitest"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.14.0",
@@ -17,5 +20,16 @@
     "globby": "^13.1.1",
     "js-sha256": "^0.9.0",
     "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.2.0",
+    "@playwright/test": "^1.35.1",
+    "@solidjs/testing-library": "^0.8.3",
+    "express": "^4.18.2",
+    "happy-dom": "^9.20.3",
+    "playwright": "^1.35.1",
+    "puppeteer": "^20.7.4",
+    "vite-plugin-solid": "^2.7.0",
+    "vitest": "^0.32.2"
   }
 }
