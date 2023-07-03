@@ -6,6 +6,12 @@ start:
 	npm run dev
 build:
 	npm run build
+cucumber: build
+	npm run test:cucumber
+playwright: build
+	npm run test:playwright
+vitest:
+	npm run test:vitest
 netlify:
 	netlify init
 gist:

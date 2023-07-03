@@ -1,0 +1,27 @@
+name: Test
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  macbook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: npm install
+        run: npm install
+
+      - name: npm build
+        run: npm run build
+
+      - name: run cucumber tests
+        run: xvfb-run --auto-servernum npm run test:cucumber
+
+      - name: run playrwight tests
+        run: npm run test:playwright
+
+      - name: run vitest tests
+        run: npm run test:vitest
