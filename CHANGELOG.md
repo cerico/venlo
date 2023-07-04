@@ -1,3 +1,12 @@
+# [1.11.0](https://github.com/cerico/venlo/compare/v1.10.2...v1.11.0) (2023-07-04)
+
+
+### Features
+
+* add tests ([6ab70d5](https://github.com/cerico/venlo/commit/6ab70d56673764fd94db14125058ff4702cd5a7a))
+
+
+
 ## [1.10.2](https://github.com/cerico/venlo/compare/v1.10.1...v1.10.2) (2023-06-26)
 
 
