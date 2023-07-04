@@ -17,4 +17,3 @@ export const logger = {
     console.log(chalk.white.bold(...args))
   }
 }
-

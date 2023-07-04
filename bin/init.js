@@ -1,44 +1,20 @@
 #! /usr/bin/env node
-var TITLE_TEXT = "Venlo"
 import chalk from "chalk"
-import { execSync, exec } from "child_process"
+import { exec } from "child_process"
 import { promisify } from "util"
 import ora2 from "ora"
 import fs from "fs-extra"
 import path from "path"
 import { fileURLToPath } from "url"
-import figlet from "figlet"
-import gradient from "gradient-string"
 import { logger } from "./logger.js"
 import { runCli } from "./cli.js"
+import { replaceAndWrite, checkPython, renderTitle } from "./utils.js"
 var execa = promisify(exec)
 var __filename = fileURLToPath(import.meta.url)
 var distPath = path.dirname(__filename)
 var PKG_ROOT = path.join(distPath, "../")
 
-var poimandresTheme = {
-  blue: "#FF757D",
-  cyan: "#fff"
-}
-
-const checkPython = () => {
-  try {
-    execSync("python3 --version")
-    return true
-  } catch (error) {
-    console.log(error)
-    logger.error("You need to install Python, check https://www.python.org/downloads/")
-    logger.warn("Defaulting to node for json")
-    return false
-  }
-}
-var renderTitle = () => {
-  const text = figlet.textSync(TITLE_TEXT, { font: "Small", color: "#FF757D" })
-  const t3Gradient = gradient(Object.values(poimandresTheme))
-  console.log(t3Gradient.multiline(text))
-}
-
-var main = async () => {
+const main = async () => {
   renderTitle()
   let appName, language, packages, design
   const args = process.argv.slice(2, process.argv.length)
@@ -83,66 +59,12 @@ var main = async () => {
   await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
     spaces: 2
   })
-  fs.readFile(path.join(projectDir, `src/layouts/${design}.astro`), "utf-8", function (err, contents) {
-    if (err) {
-      console.log(err)
-      return
-    }
-    const newTitle = appName.charAt(0).toUpperCase() + appName.slice(1)
-    const replaced = contents.replace(/Page Title/g, newTitle)
 
-    fs.writeFile(path.join(projectDir, `src/layouts/${design}.astro`), replaced, "utf-8", function (err) {
-      if (err) {
-        console.log(err)
-        return
-      }
-    })
-  })
-  fs.readFile(path.join(projectDir, "tests/playwright/homepage.spec.ts"), "utf-8", function (err, contents) {
-    if (err) {
-      console.log(err)
-      return
-    }
-    const newTitle = appName.charAt(0).toUpperCase() + appName.slice(1)
-    const replaced = contents.replace(/Page Title/g, newTitle)
+  await replaceAndWrite(projectDir, appName, `src/layouts/${design}.astro`)
+  await replaceAndWrite(projectDir, appName, "tests/playwright/homepage.spec.ts")
+  await replaceAndWrite(projectDir, appName, "tests/cucumber/features/homepage.feature")
+  await replaceAndWrite(projectDir, appName, "README.md")
 
-    fs.writeFile(path.join(projectDir, "tests/playwright/homepage.spec.ts"), replaced, "utf-8", function (err) {
-      if (err) {
-        console.log(err)
-        return
-      }
-    })
-  })
-  fs.readFile(path.join(projectDir, "tests/cucumber/features/homepage.feature"), "utf-8", function (err, contents) {
-    if (err) {
-      console.log(err)
-      return
-    }
-    const newTitle = appName.charAt(0).toUpperCase() + appName.slice(1)
-    const replaced = contents.replace(/Page Title/g, newTitle)
-
-    fs.writeFile(path.join(projectDir, "tests/cucumber/features/homepage.feature"), replaced, "utf-8", function (err) {
-      if (err) {
-        console.log(err)
-        return
-      }
-    })
-  })
-  fs.readFile(path.join(projectDir, "README.md"), "utf-8", function (err, contents) {
-    if (err) {
-      console.log(err)
-      return
-    }
-    const newTitle = appName.charAt(0).toUpperCase() + appName.slice(1)
-    const replaced = contents.replace(/title/g, newTitle)
-
-    fs.writeFile(path.join(projectDir, "README.md"), replaced, "utf-8", function (err) {
-      if (err) {
-        console.log(err)
-        return
-      }
-    })
-  })
   const repo = `\nrepo:\n\tgh repo create ${appName} --public --source=. --remote=upstream`
   fs.appendFile(path.join(projectDir, "Makefile"), repo)
   spinner.succeed(`${chalk.cyan.bold(appName)} scaffolded successfully!`)
