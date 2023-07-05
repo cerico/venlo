@@ -1,23 +1,30 @@
-import inquirer from "inquirer"
+import inquirer, { QuestionCollection } from "inquirer"
 
-export const runCli = async () => {
-  const cliResults = {}
+interface CliResults {
+  appName?: string
+  language?: string
+  packages?: string
+  design?: string
+}
+
+export const runCli = async (): Promise<CliResults> => {
+  const cliResults: CliResults = {}
   const cliProvidedName = process.argv[2]
   if (cliProvidedName) {
     cliResults.appName = cliProvidedName
   } else {
-    const { appName } = await inquirer.prompt({
+    const questions: QuestionCollection<{ appName: string }> = {
       name: "appName",
       type: "input",
       message: "What will your project be called?",
-      // validate: validateAppName,
-      transformer: (input) => {
+      transformer: (input: string) => {
         return input.trim()
       }
-    })
+    }
+    const { appName } = await inquirer.prompt(questions)
     cliResults.appName = appName
   }
-  const { language } = await inquirer.prompt({
+  const questionsLanguage: QuestionCollection<{ language: string }> = {
     name: "language",
     type: "list",
     message: "Will you be using Astro or Next?",
@@ -26,9 +33,10 @@ export const runCli = async () => {
       { name: "next", value: "next", short: "next" }
     ],
     default: "astro"
-  })
+  }
+  const { language } = await inquirer.prompt(questionsLanguage)
   if (language === "astro") {
-    const { packages } = await inquirer.prompt({
+    const questionsPackages: QuestionCollection<{ packages: string }> = {
       name: "packages",
       type: "list",
       message: "How will you be handling json?",
@@ -37,9 +45,10 @@ export const runCli = async () => {
         { name: "python", value: "python", short: "python" }
       ],
       default: "node"
-    })
+    }
+    const { packages } = await inquirer.prompt(questionsPackages)
     cliResults.packages = packages
-    const { design } = await inquirer.prompt({
+    const questionsDesign: QuestionCollection<{ design: string }> = {
       name: "design",
       type: "list",
       message: "Choose a design",
@@ -52,7 +61,8 @@ export const runCli = async () => {
         { name: "readme", value: "readme", short: "readme" }
       ],
       default: "default"
-    })
+    }
+    const { design } = await inquirer.prompt(questionsDesign)
     cliResults.design = design
   }
   cliResults.language = language
