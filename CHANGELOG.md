@@ -1,3 +1,14 @@
+## [1.11.1](https://github.com/cerico/venlo/compare/v1.11.0...v1.11.1) (2023-07-05)
+
+
+### Bug Fixes
+
+* move cli into own file ([eb46af6](https://github.com/cerico/venlo/commit/eb46af627cfba46760f8c9b80aeb4d1bd7a3d651))
+* move function into utils file ([e9add87](https://github.com/cerico/venlo/commit/e9add8711cc93c9956db2fe5d99427afb0cd5831))
+* move logger into own file ([0dcf6f3](https://github.com/cerico/venlo/commit/0dcf6f35504f906aee3591010432445e3aa4ccd4))
+
+
+
 # [1.11.0](https://github.com/cerico/venlo/compare/v1.10.2...v1.11.0) (2023-07-04)
 
 
