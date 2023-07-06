@@ -1,3 +1,12 @@
+## [1.11.2](https://github.com/cerico/venlo/compare/v1.11.1...v1.11.2) (2023-07-06)
+
+
+### Bug Fixes
+
+* use typescript ([3d88c72](https://github.com/cerico/venlo/commit/3d88c72485fd19a7fb4d0baa9b333c3a67d55cc2))
+
+
+
 ## [1.11.1](https://github.com/cerico/venlo/compare/v1.11.0...v1.11.1) (2023-07-05)
 
 
