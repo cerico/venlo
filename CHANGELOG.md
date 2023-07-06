@@ -1,3 +1,13 @@
+## [1.11.3](https://github.com/cerico/venlo/compare/v1.11.2...v1.11.3) (2023-07-06)
+
+
+### Bug Fixes
+
+* add missing build step in github action for publishing package ([80bb12f](https://github.com/cerico/venlo/commit/80bb12ff558bcc40d2fc3dac5fe2ec9bfe43d445))
+* temporarily disable test as venlo offline ([4470170](https://github.com/cerico/venlo/commit/4470170f0678fde56adf9d5c4661c0c74d91b3e6))
+
+
+
 ## [1.11.2](https://github.com/cerico/venlo/compare/v1.11.1...v1.11.2) (2023-07-06)
 
 
