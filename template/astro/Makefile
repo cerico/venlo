@@ -12,6 +12,7 @@ playwright: build
 	npm run test:playwright
 vitest:
 	npm run test:vitest
+test: cucumber playwright vitest
 netlify:
 	netlify init
 gist:

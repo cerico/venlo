@@ -1,16 +1,16 @@
 ---
 import Layout from '../layouts/default.astro';
+import App from "../solid/components/App"
 ---
 <Layout>
   <main>
     <section class="container">
       <h1 class="title">
-          404: Page Not Found.<br/>
+        Score<br/>
       </h1>
       <p class="subtitle">
-          This page does not exist
+        current: <App client:load />
       </p>
     </section>
   </main>
 </Layout>
-
