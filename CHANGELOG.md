@@ -1,3 +1,12 @@
+## [1.11.4](https://github.com/cerico/venlo/compare/v1.11.3...v1.11.4) (2023-07-07)
+
+
+### Bug Fixes
+
+* add solidjs ([ff06ae9](https://github.com/cerico/venlo/commit/ff06ae9438ceb88367f2a09b86776d5ccd61b654))
+
+
+
 ## [1.11.3](https://github.com/cerico/venlo/compare/v1.11.2...v1.11.3) (2023-07-06)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "venlo",
   "type": "module",
-  "version": "1.11.3",
+  "version": "1.11.4",
   "description": "",
   "main": "index.js",
   "scripts": {
