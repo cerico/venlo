@@ -13,18 +13,22 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.14.0",
+    "@astrojs/solid-js": "^2.0.2",
     "astro": "^2.0.2",
     "astro-compress": "0.0.13",
     "cheerio": "^1.0.0-rc.11",
     "d3": "^7.8.2",
     "globby": "^13.1.1",
     "js-sha256": "^0.9.0",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "solid-js": "^1.6.11"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^9.2.0",
     "@playwright/test": "^1.35.1",
     "@solidjs/testing-library": "^0.8.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/user-event": "^14.4.3",
     "express": "^4.18.2",
     "happy-dom": "^9.20.3",
     "playwright": "^1.35.1",

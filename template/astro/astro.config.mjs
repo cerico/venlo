@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config';
-
-import mdx from "@astrojs/mdx";
+import { defineConfig } from 'astro/config'
+import solidJs from "@astrojs/solid-js"
+import mdx from "@astrojs/mdx"
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,5 +8,5 @@ export default defineConfig({
     port: 2960,
     host: true
   },
-  integrations: [mdx()]
+  integrations: [mdx(),solidJs()]
 });
