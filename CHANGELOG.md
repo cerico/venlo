@@ -1,3 +1,12 @@
+## [1.11.5](https://github.com/cerico/venlo/compare/v1.11.4...v1.11.5) (2023-07-29)
+
+
+### Bug Fixes
+
+* update tldr target to handle dupes ([8ba46d7](https://github.com/cerico/venlo/commit/8ba46d7fa1d456881285fb4e080ab4cd446a943f))
+
+
+
 ## [1.11.4](https://github.com/cerico/venlo/compare/v1.11.3...v1.11.4) (2023-07-07)
 
 
