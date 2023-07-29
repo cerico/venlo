@@ -1,7 +1,7 @@
 tldr:
 	@echo Available commands
 	@echo ------------------
-	@for i in `grep '^[[:alpha:]]*:' Makefile | tr -d \:`; do echo make $$i; done
+	@grep '^[[:alpha:]][^:[:space:]]*:' Makefile | cut -d ':' -f 1 | sort -u | sed 's/^/make /'
 start:
 	npm run dev
 build:
@@ -13,6 +13,7 @@ playwright: build
 vitest:
 	npm run test:vitest
 test: cucumber playwright vitest
+	@echo running all tests
 netlify:
 	netlify init
 gist:
