@@ -20,6 +20,9 @@ jobs:
       - name: is gitconfig there
         run: cat ~/.gitconfig
 
+      - name: ls
+        run: ls
+
       - name: installs the site
         run: node bin/init.js --astro venlo readme
 
