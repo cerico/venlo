@@ -1,3 +1,18 @@
+# [1.12.0](https://github.com/cerico/venlo/compare/v1.11.5...v1.12.0) (2023-08-06)
+
+
+### Bug Fixes
+
+* add sourcemaps to gitignore ([1b3eda7](https://github.com/cerico/venlo/commit/1b3eda727b68d4be84ab045329e0770c54a466e4))
+* remove breaking astro-compress package ([aba6522](https://github.com/cerico/venlo/commit/aba652281601ab43591b2a45642d4af490d03916))
+
+
+### Features
+
+* run local venlo not npm venlo in workflows ([d2f7af7](https://github.com/cerico/venlo/commit/d2f7af7beaedf498b443f641a2a7ad980f3e76cf))
+
+
+
 ## [1.11.5](https://github.com/cerico/venlo/compare/v1.11.4...v1.11.5) (2023-07-29)
 
 
