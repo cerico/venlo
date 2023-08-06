@@ -21,7 +21,7 @@ jobs:
         run: cat ~/.gitconfig
 
       - name: installs the site
-        run: npm_config_yes=true npx venlo@latest --default venlo readme
+        run: node bin/init.js --astro venlo readme
 
       - name: copies top level mds
         run: for f in *.md; do cp "$f" "venlo/src/content/top/$(echo "$f" | tr '[:upper:]' '[:lower:]')"; done
