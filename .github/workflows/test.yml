@@ -5,8 +5,10 @@ on:
       - main
 
 jobs:
-  macbook:
+  test:
     runs-on: ubuntu-latest
+    env:
+      STAGING_URL: asda.io37.ch
 
     steps:
       - uses: actions/checkout@v3
@@ -34,3 +36,21 @@ jobs:
 
       - name: Build
         run: cd venlo && make build
+
+      - name: Create branch.html
+        run: |
+          cp .github/templates/branch.html dist/branch.html
+          cp .github/templates/workflow.css dist/workflow.css
+          sed -i 's|\[REPO_NAME\]|'"$GITHUB_REPOSITORY"'|g' dist/branch.html
+          sed -i 's|\[BRANCH_NAME\]|'"$(echo $GITHUB_REF | sed 's|refs/heads/||')"'|g' dist/branch.html
+          sed -i 's|\[DATE\]|'"$(date)"'|g' dist/branch.html
+
+      - name: Rsync
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -a
+          path: dist/
+          remote_path: "/var/www/html/$STAGING_URL"
+          remote_host: $STAGING_URL
+          remote_user: deploy
+          remote_key: ${{ secrets.DEPLOY_KEY }}
