@@ -5,7 +5,7 @@
   --blue: #7AA2F7;
   --parchment: #f3f7e9;
   --paper: #f5f3e8;
-  --dark:#303540;
+  --dark: #303540;
   --black: #222;
   --green: #7EE787;
   --ft: #e9b5b8;
@@ -35,31 +35,50 @@
   --bg: var(--detective-red);
   --fg: var(--black);
   --entry-bg: var(--paper);
+
   .entry {
     background: var(--entry-bg)
   }
-  em, strong {
+
+  em,
+  strong {
     color: var(--detective-red);
   }
+
   .almere {
     background-color: var(--detective-yellow);
     color: var(--detective-red);
   }
-  .bremen, .charleroi {
+
+  .bremen,
+  .charleroi {
     color: var(--paper);
     background-color: var(--fg);
+
+    a {
+      color: currentColor;
+    }
   }
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
-  p, li { color: var(--fg)}
-  a { color: var(--fg)}
+
+  p,
+  li {
+    color: var(--fg)
+  }
+
+  a {
+    color: var(--fg)
+  }
+
   @media (prefers-color-scheme: light) {
     --fg: var(--black);
     --bg: var(--white);
   }
+
   @media (prefers-color-scheme: dark) {
     --fg: var(--white);
     --bg: var(--black);
