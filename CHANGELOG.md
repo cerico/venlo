@@ -1,3 +1,12 @@
+# [1.13.0](https://github.com/cerico/venlo/compare/v1.12.1...v1.13.0) (2023-08-21)
+
+
+### Features
+
+* update gists/detective design ([56c5eae](https://github.com/cerico/venlo/commit/56c5eaea97dfc418704c9a83ef4d8948530b03e7))
+
+
+
 ## [1.12.1](https://github.com/cerico/venlo/compare/v1.12.0...v1.12.1) (2023-08-21)
 
 
