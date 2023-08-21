@@ -39,17 +39,17 @@ jobs:
 
       - name: Create branch.html
         run: |
-          cp .github/templates/branch.html dist/branch.html
-          cp .github/templates/workflow.css dist/workflow.css
-          sed -i 's|\[REPO_NAME\]|'"$GITHUB_REPOSITORY"'|g' dist/branch.html
-          sed -i 's|\[BRANCH_NAME\]|'"$(echo $GITHUB_REF | sed 's|refs/heads/||')"'|g' dist/branch.html
-          sed -i 's|\[DATE\]|'"$(date)"'|g' dist/branch.html
+          cp .github/templates/branch.html venlo/dist/branch.html
+          cp .github/templates/workflow.css venlo/dist/workflow.css
+          sed -i 's|\[REPO_NAME\]|'"$GITHUB_REPOSITORY"'|g' venlo/dist/branch.html
+          sed -i 's|\[BRANCH_NAME\]|'"$(echo $GITHUB_REF | sed 's|refs/heads/||')"'|g' venlo/dist/branch.html
+          sed -i 's|\[DATE\]|'"$(date)"'|g' venlo/dist/branch.html
 
       - name: Rsync
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -a
-          path: dist/
+          path: venlo/dist/
           remote_path: "/var/www/html/$STAGING_URL"
           remote_host: $STAGING_URL
           remote_user: deploy
