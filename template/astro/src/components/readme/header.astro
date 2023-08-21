@@ -1,18 +1,17 @@
 ---
-import MobileDrawer from './mobile-drawer.astro'
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.slice(1)
 ---
-<header class="header">
-  <MobileDrawer />
-  <div class="logo-container"></div>
-  <nav class="mobile-menu-button">
-    <span id="draw-is-closed"></span>
-  </nav>
-  <nav class="desktop-nav">
-    <ul>
-      <li><a class={currentPath === "" ? "active" : ""} href="/">readme</a></li>
-      <li><a class={currentPath === "changelog" ? "active" : ""} href="/changelog">changelog</a></li>
-    </ul>
-  </nav>
-</header>
+
+<div class="wrapper" id="R">
+  <div class="box almere">
+    <span class="num"
+      >{!currentPath || currentPath.length === 0 ? "R" : currentPath.charAt(0) === "c" ? "C" : "404"}</span
+    >
+  </div>
+  <div class="box bremen"></div>
+  <div class="box charleroi">
+    <a class={currentPath === "" ? "active" : ""} href="/">readme</a>
+    <a class={currentPath === "changelog" ? "active" : ""} href="/changelog">changelog</a>
+  </div>
+</div>

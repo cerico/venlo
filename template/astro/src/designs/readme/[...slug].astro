@@ -1,27 +1,28 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "../layouts/readme.astro";
+import { getCollection } from "astro:content"
+import Layout from "../layouts/readme.astro"
 
 export async function getStaticPaths() {
-  const docs = await getCollection("top");
+  const docs = await getCollection("top")
   const routes = docs.map((entry) => ({
     params: { slug: entry.slug },
-    props: { entry },
-  }));
+    props: { entry }
+  }))
   const index = {
     params: { slug: undefined },
-    props: { entry: docs.filter((entry) => entry.slug === 'index')[0] },
+    props: { entry: docs.filter((entry) => entry.slug === "index")[0] }
   }
-  return [ ...routes, index ]
+  return [...routes, index]
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { entry } = Astro.props
+const { Content } = await entry.render()
 ---
+
 <Layout>
-  <main>
-    <section class={entry.slug === "changelog" ? "container changelog" : "container readme"}>
+  <div class="entry">
+    <div class="copy">
       <Content />
-    </section>
-  </main>
+    </div>
+  </div>
 </Layout>
