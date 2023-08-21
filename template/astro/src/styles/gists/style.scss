@@ -1,9 +1,14 @@
 @use '../colors';
 @use '../fonts';
 @use '../defaults';
+@use './typewriter';
 
 body {
   margin: 8px;
+}
+
+.detective article {
+  max-width: 50rem
 }
 
 .entry {
