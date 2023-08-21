@@ -1,3 +1,12 @@
+## [1.12.1](https://github.com/cerico/venlo/compare/v1.12.0...v1.12.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* correct placement of solidjs in default ([652a7fd](https://github.com/cerico/venlo/commit/652a7fd78016d4624a1b3b444232b3cb4c404541))
+
+
+
 # [1.12.0](https://github.com/cerico/venlo/compare/v1.11.5...v1.12.0) (2023-08-06)
 
 
