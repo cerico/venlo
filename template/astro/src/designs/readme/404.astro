@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/readme.astro"
+import Header from "../components/readme/header.astro"
 const id = "404"
 const d = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })
 ---
 
 <Layout>
+  <Header letter="404" />
   <div class="entry">
     <div class="copy">
       <section class="container">

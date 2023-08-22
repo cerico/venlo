@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content"
 import Layout from "../layouts/readme.astro"
+import Header from "../components/readme/header.astro"
 
 export async function getStaticPaths() {
   const docs = await getCollection("top")
@@ -17,9 +18,16 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props
 const { Content } = await entry.render()
+let letter
+if (entry.slug === "index") {
+  letter = "R"
+} else {
+  letter = entry.slug.charAt(0).toUpperCase()
+}
 ---
 
 <Layout>
+  <Header letter={letter} />
   <div class="entry">
     <div class="copy">
       <Content />
