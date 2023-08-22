@@ -31,36 +31,6 @@
   --bg: var(--pink);
 }
 
-.detective {
-  --bg: var(--detective-red);
-  --fg: var(--black);
-  --entry-bg: var(--paper);
-
-  .entry {
-    background: var(--entry-bg)
-  }
-
-  em,
-  strong {
-    color: var(--detective-red);
-  }
-
-  .almere {
-    background-color: var(--detective-yellow);
-    color: var(--detective-red);
-  }
-
-  .bremen,
-  .charleroi {
-    color: var(--paper);
-    background-color: var(--fg);
-
-    a {
-      color: currentColor;
-    }
-  }
-}
-
 body {
   background: var(--bg);
   color: var(--fg);
