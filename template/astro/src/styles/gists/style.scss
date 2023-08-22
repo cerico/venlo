@@ -67,31 +67,35 @@ img {
 
 
 code {
-	--border-radius: 3px;
-	--padding-block: 0.2rem;
-	--padding-inline: 0.33rem;
+  --border-radius: 3px;
+  --padding-block: 0.2rem;
+  --padding-inline: 0.33rem;
 
-	font-family: var(--font-mono);
-	font-size: 0.85em;
-	color: inherit;
-	background-color: var(--theme-code-inline-bg);
-	padding: var(--padding-block) var(--padding-inline);
-	margin: calc(var(--padding-block) * -1) -0.125em;
-	border-radius: var(--border-radius);
-	word-break: break-word;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: inherit;
+  background-color: var(--theme-code-inline-bg);
+  padding: var(--padding-block) var(--padding-inline);
+  margin: calc(var(--padding-block) * -1) -0.125em;
+  border-radius: var(--border-radius);
+  word-break: break-word;
 }
 
-pre.astro-code > code {
-	all: unset;
+pre.astro-code>code {
+  all: unset;
 }
 
 pre {
-	position: relative;
-	--padding-block: 1rem;
-	--padding-inline: 2rem;
-	padding: var(--padding-block) var(--padding-inline);
-	padding-right: calc(var(--padding-inline) * 2);
+  position: relative;
+  --padding-block: 1rem;
+  --padding-inline: 2rem;
+  padding: var(--padding-block) var(--padding-inline);
+  padding-right: calc(var(--padding-inline) * 2);
 
-	overflow-y: hidden;
-	overflow-x: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.badge-image {
+  width: auto;
 }
