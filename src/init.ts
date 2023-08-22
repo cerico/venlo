@@ -1,5 +1,7 @@
 #! /usr/bin/env node
 import chalk from "chalk"
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 import { exec } from "child_process"
 import { promisify } from "util"
 import ora2 from "ora"
@@ -14,20 +16,48 @@ var __filename = fileURLToPath(import.meta.url)
 var distPath = path.dirname(__filename)
 var PKG_ROOT = path.join(distPath, "../")
 
+const argv = yargs(hideBin(process.argv))
+  .option('appName', {
+    alias: 'a',
+    type: 'string',
+    description: 'Name of the project'
+  })
+  .option('language', {
+    alias: 'l',
+    type: 'string',
+    choices: ['astro', 'next'],
+    default: 'astro',
+    description: 'Programming language'
+  })
+  .option('packages', {
+    alias: 'p',
+    type: 'string',
+    choices: ['node', 'python'],
+    default: 'node',
+    description: 'Backend language'
+  })
+  .option('design', {
+    alias: 'd',
+    type: 'string',
+    choices: ['blank', 'default', 'gists', 'scroll', 'booklet', 'readme'],
+    default: 'default',
+    description: 'Design choice'
+  })
+  .option('colorScheme', {
+    alias: 'c',
+    type: 'string',
+    choices: ['detective', 'stuttgart'],
+    default: 'detective',
+    description: 'Color scheme'
+  })
+  .parse();
+
 const main = async () => {
   renderTitle()
-  let appName, language, packages, design
-  const args = process.argv.slice(2, process.argv.length)
-  if (args.filter((a) => a.startsWith("-")).length > 0) {
-    appName = args.filter((a) => !a.startsWith("-"))[0] || "created-by-venlo"
-    language = args.filter((a) => !a.startsWith("-")).filter((a) => ["astro", "next"].includes(a))[0] || "astro"
-    packages = args.filter((a) => !a.startsWith("-")).filter((a) => ["node", "python"].includes(a))[0] || "node"
-    design =
-      args
-        .filter((a) => !a.startsWith("-"))
-        .filter((a) => ["blank", "default", "gists", "scroll", "booklet", "readme"].includes(a))[0] || "default"
-  } else {
-    ;({ appName, language, packages, design } = await runCli())
+  let { appName, language, packages, design, colorScheme } = argv;
+
+  if (!appName) {
+    ({ appName, language, packages, design, colorScheme } = await runCli());
   }
   const projectDir = path.resolve(process.cwd(), appName)
   const languages = {
@@ -59,7 +89,6 @@ const main = async () => {
   await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
     spaces: 2
   })
-
   await replaceAndWrite(projectDir, appName, `src/layouts/${design}.astro`)
   await replaceAndWrite(projectDir, appName, "tests/playwright/homepage.spec.ts")
   await replaceAndWrite(projectDir, appName, "tests/cucumber/features/homepage.feature")
@@ -78,6 +107,11 @@ const main = async () => {
   if (design == "gists") {
     const gistCmd = "node gist.js"
     await execa(gistCmd, { cwd: projectDir })
+  }
+  if (design === "readme") {
+    const sourceColorPath = path.join(PKG_ROOT, `template/astro/src/styles/gists/${colorScheme}.scss`);
+    const destColorPath = path.join(projectDir, "src/styles/gists/colors.scss");
+    await fs.copyFile(sourceColorPath, destColorPath);
   }
   const initCmd = "git init; git add .; git commit -m 'feat: initialized repo'"
   await execa(initCmd, { cwd: projectDir })
