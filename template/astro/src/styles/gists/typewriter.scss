@@ -1,3 +1,33 @@
+@use './colors';
+
+.detective {
+  background: var(--article);
+
+  .entry {
+    background: var(--entry)
+  }
+
+  em,
+  strong {
+    color: var(--article);
+  }
+
+  .almere {
+    background-color: var(--almere);
+    color: var(--article);
+  }
+
+  .bremen,
+  .charleroi {
+    color: var(--entry);
+    background-color: var(--top);
+
+    a {
+      color: currentColor;
+    }
+  }
+}
+
 .detective article .entry,
 .detective .copy p,
 .detective {
@@ -8,17 +38,17 @@ strong,
 code,
 article .entry .copy code {
   font-family: 'Source Code Pro', 'Fira Mono', 'Roboto Mono', monospace;
-  color: var(--detective-red);
+  color: var(--article);
 }
 
 article .entry .copy ul li code {
-  color: var(--white)
+  color: var(--entry)
 }
 
 .copy h3,
 .copy h2,
 .copy h1 {
-  color: var(--detective-red);
+  color: var(--article);
 }
 
 .copy p,
@@ -43,7 +73,7 @@ h4 {
 }
 
 h4 {
-  color: var(--paper);
+  color: var(--entry);
   font-weight: 200
 }
 
@@ -65,16 +95,16 @@ pre+blockquote {
   padding-top: 0px;
   border-radius: 5px;
   margin-top: -1rem;
-  border: 1px solid black;
+  border: 1px solid var(--top);
 
   code {
-    color: var(--white) !important
+    color: var(--entry) !important
   }
 }
 
 
 .copy ul {
-  background: var(--lightred);
+  background: var(--list);
   padding-bottom: 1rem;
   padding-top: 1rem;
 
@@ -83,21 +113,13 @@ pre+blockquote {
   }
 }
 
-
-.coopy li {
-  text-indent: 0rem;
-  margin-bottom: 0.5em;
-  text-align: left;
-  margin-left: -2.5rem;
-}
-
 .copy p {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .copy ul li p:first-child {
-  color: var(--white);
-  background: var(--black);
+  color: var(--entry);
+  background: var(--top);
   padding: 0.5rem;
   margin-left: -2.5rem;
   margin-top: -1rem
@@ -111,29 +133,27 @@ pre+blockquote {
   padding-top: 0px;
 
   .code {
-    color: var(--white)
+    color: var(--entry)
   }
 }
 
 article .entry .copy ul li p:last-child code {
-  color: var(--white);
+  color: var(--entry);
 }
 
 .copy ul li strong {
-  color: var(--white);
+  color: var(--entry);
 }
 
 article .entry .copy h4 {
-  background: rgb(238, 190, 109);
   padding: 8px;
   margin-bottom: -1rem;
   display: block;
   width: 100%;
-  background: var(--detective-red);
+  background: var(--article);
 
   code {
-    color: white;
-    color: var(--white);
+    color: var(--entry);
   }
 }
 
@@ -143,10 +163,10 @@ article .entry .copy h4 {
   }
 
   a:hover {
-    color: var(--detective-red);
+    color: var(--article);
   }
 
   .copy ul a:hover {
-    color: var(--white);
+    color: var(--entry);
   }
 }
