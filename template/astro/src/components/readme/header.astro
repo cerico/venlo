@@ -1,13 +1,12 @@
 ---
 const pathname = new URL(Astro.request.url).pathname
 const currentPath = pathname.slice(1)
+const { letter } = Astro.props
 ---
 
 <div class="wrapper" id="R">
   <div class="box almere">
-    <span class="num"
-      >{!currentPath || currentPath.length === 0 ? "R" : currentPath.charAt(0) === "c" ? "C" : "404"}</span
-    >
+    <span class="num">{letter}</span>
   </div>
   <div class="box bremen"></div>
   <div class="box charleroi">
