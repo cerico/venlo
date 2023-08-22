@@ -136,3 +136,17 @@ article .entry .copy h4 {
     color: var(--white);
   }
 }
+
+.entry {
+  a {
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: var(--detective-red);
+  }
+
+  .copy ul a:hover {
+    color: var(--white);
+  }
+}
