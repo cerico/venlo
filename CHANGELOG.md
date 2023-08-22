@@ -1,3 +1,16 @@
+## [1.14.1](https://github.com/cerico/venlo/compare/v1.14.0...v1.14.1) (2023-08-22)
+
+
+### Bug Fixes
+
+* add badge-image class ([273773c](https://github.com/cerico/venlo/commit/273773c2784fd3bb53fe1cf493cc4f5c95eaa1cd))
+* add css for links inside markdown ([4ec01cf](https://github.com/cerico/venlo/commit/4ec01cf0c8f8c8a86c2ba5ea5490ea4b5c8037a8))
+* import header in page not layout ([931803e](https://github.com/cerico/venlo/commit/931803e1419b873aeda940a78e19c1faa8195e24))
+* make docs use same design as readme ([d3048cf](https://github.com/cerico/venlo/commit/d3048cfe75e04e7e373b7f9fb0bcf85bff34419e))
+* update template docs w links ([6d00721](https://github.com/cerico/venlo/commit/6d00721538f78b7ac3cab25e7b10bca5ab2330fc))
+
+
+
 # [1.14.0](https://github.com/cerico/venlo/compare/v1.13.0...v1.14.0) (2023-08-22)
 
 
