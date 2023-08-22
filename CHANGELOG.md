@@ -1,3 +1,14 @@
+# [1.14.0](https://github.com/cerico/venlo/compare/v1.13.0...v1.14.0) (2023-08-22)
+
+
+### Features
+
+* add staging url for test deploy ([7842bee](https://github.com/cerico/venlo/commit/7842beebd0809cb5f9dd444dd0f4454466ac0654))
+* add staging url for test deploy ([efe488b](https://github.com/cerico/venlo/commit/efe488b80ec82f558a3024e8761a787a825a5c1a))
+* update readme design in detective style ([4c280d1](https://github.com/cerico/venlo/commit/4c280d1be0d50dd90a21b8037574f4e57dae60f7))
+
+
+
 # [1.13.0](https://github.com/cerico/venlo/compare/v1.12.1...v1.13.0) (2023-08-21)
 
 
