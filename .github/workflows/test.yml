@@ -26,7 +26,7 @@ jobs:
         run: npm i
 
       - name: installs the site
-        run: node bin/init.js --appName venlo --language astro --design readme --colourScheme stuttgart
+        run: node bin/init.js --appName venlo --language astro --design readme --colorScheme stuttgart
 
       - name: copies top level mds
         run: for f in *.md; do cp "$f" "venlo/src/content/top/$(echo "$f" | tr '[:upper:]' '[:lower:]')"; done
