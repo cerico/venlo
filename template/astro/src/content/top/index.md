@@ -117,3 +117,12 @@ Below is an example of a yaml file
   roles:
     - { role: afterwards, tags: [always] }
 ```
+
+Link in main section [further reading](docs/detail.md)
+
+Links inside a list
+
+- [technical specs](docs/detail.md)
+- [design details](docs/detail.md)
+- [roadmap](docs/detail.md)
+- [further reading](docs/detail.md)
