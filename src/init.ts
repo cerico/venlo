@@ -8,6 +8,7 @@ import path from "path"
 import { fileURLToPath } from "url"
 import { logger } from "./logger.js"
 import { runCli } from "./cli.js"
+import { argv } from "./yargs.js"
 import { replaceAndWrite, checkPython, renderTitle } from "./utils.js"
 var execa = promisify(exec)
 var __filename = fileURLToPath(import.meta.url)
@@ -16,18 +17,10 @@ var PKG_ROOT = path.join(distPath, "../")
 
 const main = async () => {
   renderTitle()
-  let appName, language, packages, design
-  const args = process.argv.slice(2, process.argv.length)
-  if (args.filter((a) => a.startsWith("-")).length > 0) {
-    appName = args.filter((a) => !a.startsWith("-"))[0] || "created-by-venlo"
-    language = args.filter((a) => !a.startsWith("-")).filter((a) => ["astro", "next"].includes(a))[0] || "astro"
-    packages = args.filter((a) => !a.startsWith("-")).filter((a) => ["node", "python"].includes(a))[0] || "node"
-    design =
-      args
-        .filter((a) => !a.startsWith("-"))
-        .filter((a) => ["blank", "default", "gists", "scroll", "booklet", "readme"].includes(a))[0] || "default"
-  } else {
-    ;({ appName, language, packages, design } = await runCli())
+  let { appName, language, packages, design, colorScheme } = argv;
+
+  if (!appName) {
+    ({ appName, language, packages, design, colorScheme } = await runCli());
   }
   const projectDir = path.resolve(process.cwd(), appName)
   const languages = {
@@ -59,7 +52,6 @@ const main = async () => {
   await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
     spaces: 2
   })
-
   await replaceAndWrite(projectDir, appName, `src/layouts/${design}.astro`)
   await replaceAndWrite(projectDir, appName, "tests/playwright/homepage.spec.ts")
   await replaceAndWrite(projectDir, appName, "tests/cucumber/features/homepage.feature")
@@ -78,6 +70,11 @@ const main = async () => {
   if (design == "gists") {
     const gistCmd = "node gist.js"
     await execa(gistCmd, { cwd: projectDir })
+  }
+  if (design === "readme") {
+    const sourceColorPath = path.join(PKG_ROOT, `template/astro/src/styles/gists/${colorScheme}.scss`);
+    const destColorPath = path.join(projectDir, "src/styles/gists/colors.scss");
+    await fs.copyFile(sourceColorPath, destColorPath);
   }
   const initCmd = "git init; git add .; git commit -m 'feat: initialized repo'"
   await execa(initCmd, { cwd: projectDir })

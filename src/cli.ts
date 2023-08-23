@@ -5,6 +5,7 @@ interface CliResults {
   language?: string
   packages?: string
   design?: string
+  colorScheme?: string
 }
 
 export const runCli = async (): Promise<CliResults> => {
@@ -62,9 +63,25 @@ export const runCli = async (): Promise<CliResults> => {
       ],
       default: "default"
     }
+
     const { design } = await inquirer.prompt(questionsDesign)
     cliResults.design = design
+
+    if (design === "readme") {
+      const questionsColorScheme: QuestionCollection<{ colorScheme: string }> = {
+        name: "colorScheme",
+        type: "list",
+        message: "Choose a color scheme for the readme design:",
+        choices: [
+            { name: "detective", value: "detective", short: "detective" },
+            { name: "stuttgart", value: "stuttgart", short: "stuttgart" }
+        ],
+        default: "detective"
+    };
+    const colorSchemeResponse = await inquirer.prompt(questionsColorScheme);
+    cliResults.colorScheme = colorSchemeResponse.colorScheme;
   }
+}
   cliResults.language = language
   return cliResults
 }
