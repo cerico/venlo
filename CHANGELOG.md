@@ -1,3 +1,19 @@
+# [1.15.0](https://github.com/cerico/venlo/compare/v1.14.1...v1.15.0) (2023-08-23)
+
+
+### Bug Fixes
+
+* tidy up readme colours ([cba5c71](https://github.com/cerico/venlo/commit/cba5c7108017f4e7ef257e8d1615fac97a4d602c))
+
+
+### Features
+
+* add yargs package ([17418be](https://github.com/cerico/venlo/commit/17418be68605094cc7896487e91415b76646516a))
+* update cli to handle new colorSchemes ([0df970e](https://github.com/cerico/venlo/commit/0df970e3d8225e64e1bc5c63fe3ca1067f9a20fb))
+* use new format for building in workflow ([6e87b58](https://github.com/cerico/venlo/commit/6e87b588e80aa73f08856bc00d5f67cae991e57f))
+
+
+
 ## [1.14.1](https://github.com/cerico/venlo/compare/v1.14.0...v1.14.1) (2023-08-22)
 
 
