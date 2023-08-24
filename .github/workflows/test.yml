@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macbook-latest
     env:
       STAGING_URL: asda.io37.ch
 
