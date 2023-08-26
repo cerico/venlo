@@ -1,3 +1,25 @@
+# [2.0.0](https://github.com/cerico/venlo/compare/v1.15.0...v2.0.0) (2023-08-26)
+
+
+### Bug Fixes
+
+* update cli to handle nextjs correctly ([b053505](https://github.com/cerico/venlo/commit/b053505a7fd6219be75df3ba20cb45b968b5e53c))
+* update Makefile for generating locally ([8f60301](https://github.com/cerico/venlo/commit/8f60301ca74fbdf2e2bb3744352d2cf4b155cb67))
+
+
+### Features
+
+* add bin files to gitignore ([7ff792c](https://github.com/cerico/venlo/commit/7ff792c25f653ce0ffb5e3c21c8ac84d5da3d174))
+* minor style changes to readme/gists design ([da12c36](https://github.com/cerico/venlo/commit/da12c3687a24151b014d88c6e425abd4d3d99049))
+* update read me with screenshots ([2454bae](https://github.com/cerico/venlo/commit/2454baec4c1db2c5f1d5c0bcb42f10b0b500099d))
+
+
+### BREAKING CHANGES
+
+* 
+
+
+
 # [1.15.0](https://github.com/cerico/venlo/compare/v1.14.1...v1.15.0) (2023-08-23)
 
 
