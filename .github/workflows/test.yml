@@ -25,6 +25,9 @@ jobs:
       - name: install packages
         run: npm i
 
+      - name: Build the package
+        run: make build
+
       - name: installs the site
         run: node bin/init.js --appName venlo --language astro --design readme --colorScheme detective
 
@@ -34,7 +37,13 @@ jobs:
       - name: copies top readme to index
         run: cp README.md venlo/src/content/top/index.md
 
-      - name: Build
+      - name: Create docs directory
+        run: mkdir -p venlo/public/docs
+
+      - name: Copies screenshots to docsite
+        run: cp -r docs/screenshots venlo/public/docs
+
+      - name: Build docs
         run: cd venlo && make build
 
       - name: Create branch.html
