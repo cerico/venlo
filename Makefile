@@ -4,8 +4,7 @@ tldr:
 	@echo ------------------
 	@grep '^[[:alpha:]][^:[:space:]]*:' Makefile | cut -d ':' -f 1 | sort -u | sed 's/^/make /'
 generate: build
-	chmod a+x bin/init.js
-	./bin/init.js
+	npm run dev
 gh:
 	@echo $(NPM_TOKEN) > npm
 	gh secret set NPM_TOKEN < npm
