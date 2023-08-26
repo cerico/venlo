@@ -73,15 +73,15 @@ export const runCli = async (): Promise<CliResults> => {
         type: "list",
         message: "Choose a color scheme for the readme design:",
         choices: [
-            { name: "detective", value: "detective", short: "detective" },
-            { name: "stuttgart", value: "stuttgart", short: "stuttgart" }
+          { name: "detective", value: "detective", short: "detective" },
+          { name: "stuttgart", value: "stuttgart", short: "stuttgart" }
         ],
         default: "detective"
-    };
-    const colorSchemeResponse = await inquirer.prompt(questionsColorScheme);
-    cliResults.colorScheme = colorSchemeResponse.colorScheme;
+      }
+      const colorSchemeResponse = await inquirer.prompt(questionsColorScheme)
+      cliResults.colorScheme = colorSchemeResponse.colorScheme
+    }
   }
-}
   cliResults.language = language
   return cliResults
 }
