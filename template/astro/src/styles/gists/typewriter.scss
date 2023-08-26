@@ -53,7 +53,7 @@ article .entry .copy ul li code {
 
 .copy p,
 .copy li {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
 h1 {
@@ -107,6 +107,7 @@ pre+blockquote {
   background: var(--list);
   padding-bottom: 1rem;
   padding-top: 1rem;
+  padding-right: 1rem;
 
   li {
     list-style: square;
