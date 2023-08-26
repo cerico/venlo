@@ -19,6 +19,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           release-count: "0"
+          version-file: "package.json, package-lock.json"
 
       - name: Print the changelog
         run: echo "${{ steps.changelog.outputs.tag }}"
@@ -66,7 +67,7 @@ jobs:
       - name: copies top readme to index
         run: cp README.md venlo/src/content/top/index.md
 
-      - name: Build
+      - name: Build the docsite
         run: cd venlo && make build
 
       - name: Rsync
