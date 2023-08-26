@@ -17,10 +17,10 @@ var PKG_ROOT = path.join(distPath, "../")
 
 const main = async () => {
   renderTitle()
-  let { appName, language, packages, design, colorScheme } = argv;
+  let { appName, language, packages, design, colorScheme } = argv
 
   if (!appName) {
-    ({ appName, language, packages, design, colorScheme } = await runCli());
+    ;({ appName, language, packages, design, colorScheme } = await runCli())
   }
   const projectDir = path.resolve(process.cwd(), appName)
   const languages = {
@@ -44,21 +44,28 @@ const main = async () => {
     await fs.copyFile(py, py2)
     await fs.copyFile(js, js2)
   }
-  const designsDir = path.join(projectDir, `src/designs/${design}`)
-  const indexDir = path.join(projectDir, "src/pages")
-  await fs.copy(designsDir, indexDir)
-  const pkgJson = await fs.readJSON(path.join(projectDir, "package.json"))
-  pkgJson.name = appName
-  await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
-    spaces: 2
-  })
-  await replaceAndWrite(projectDir, appName, `src/layouts/${design}.astro`)
-  await replaceAndWrite(projectDir, appName, "tests/playwright/homepage.spec.ts")
-  await replaceAndWrite(projectDir, appName, "tests/cucumber/features/homepage.feature")
-  await replaceAndWrite(projectDir, appName, "README.md")
+  if (language === "astro") {
+    const designsDir = path.join(projectDir, `src/designs/${design}`)
+    const indexDir = path.join(projectDir, "src/pages")
+    await fs.copy(designsDir, indexDir)
+    const pkgJson = await fs.readJSON(path.join(projectDir, "package.json"))
+    pkgJson.name = appName
+    await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
+      spaces: 2
+    })
+    await replaceAndWrite(projectDir, appName, `src/layouts/${design}.astro`)
+    await replaceAndWrite(projectDir, appName, "tests/playwright/homepage.spec.ts")
+    await replaceAndWrite(projectDir, appName, "tests/cucumber/features/homepage.feature")
+    await replaceAndWrite(projectDir, appName, "README.md")
 
-  const repo = `\nrepo:\n\tgh repo create ${appName} --public --source=. --remote=upstream`
-  fs.appendFile(path.join(projectDir, "Makefile"), repo)
+    const repo = `\nrepo:\n\tgh repo create ${appName} --public --source=. --remote=upstream`
+    fs.appendFile(path.join(projectDir, "Makefile"), repo)
+    if (design === "readme") {
+      const sourceColorPath = path.join(PKG_ROOT, `template/astro/src/styles/gists/${colorScheme}.scss`)
+      const destColorPath = path.join(projectDir, "src/styles/gists/colors.scss")
+      await fs.copyFile(sourceColorPath, destColorPath)
+    }
+  }
   spinner.succeed(`${chalk.cyan.bold(appName)} scaffolded successfully!`)
   const spinner3 = ora2("Installing packages")
   spinner3.start()
@@ -70,11 +77,6 @@ const main = async () => {
   if (design == "gists") {
     const gistCmd = "node gist.js"
     await execa(gistCmd, { cwd: projectDir })
-  }
-  if (design === "readme") {
-    const sourceColorPath = path.join(PKG_ROOT, `template/astro/src/styles/gists/${colorScheme}.scss`);
-    const destColorPath = path.join(projectDir, "src/styles/gists/colors.scss");
-    await fs.copyFile(sourceColorPath, destColorPath);
   }
   const initCmd = "git init; git add .; git commit -m 'feat: initialized repo'"
   await execa(initCmd, { cwd: projectDir })
