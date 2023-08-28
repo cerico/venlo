@@ -2,7 +2,7 @@ import inquirer, { QuestionCollection } from "inquirer"
 
 interface CliResults {
   appName?: string
-  language?: string
+  framework?: string
   packages?: string
   design?: string
   colorScheme?: string
@@ -25,8 +25,8 @@ export const runCli = async (): Promise<CliResults> => {
     const { appName } = await inquirer.prompt(questions)
     cliResults.appName = appName
   }
-  const questionsLanguage: QuestionCollection<{ language: string }> = {
-    name: "language",
+  const questionsFramework: QuestionCollection<{ framework: string }> = {
+    name: "framework",
     type: "list",
     message: "Will you be using Astro or Next?",
     choices: [
@@ -35,8 +35,8 @@ export const runCli = async (): Promise<CliResults> => {
     ],
     default: "astro"
   }
-  const { language } = await inquirer.prompt(questionsLanguage)
-  if (language === "astro") {
+  const { framework } = await inquirer.prompt(questionsFramework)
+  if (framework === "astro") {
     const questionsPackages: QuestionCollection<{ packages: string }> = {
       name: "packages",
       type: "list",
@@ -82,6 +82,6 @@ export const runCli = async (): Promise<CliResults> => {
       cliResults.colorScheme = colorSchemeResponse.colorScheme
     }
   }
-  cliResults.language = language
+  cliResults.framework = framework
   return cliResults
 }

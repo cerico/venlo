@@ -57,7 +57,7 @@ Next steps:
 ## Features
 
 - **Interactive CLI**: Guided prompts to help you make the best choices for your project.
-- **Multiple Language Support**: Choose between Astro and Next for your project's foundation.
+- **Multiple Framework Support**: Choose between Astro and Next for your project's foundation.
 - **Backend Choices**: Handle JSON with either Node or Python.
 - **Design Templates**: Multiple design choices including 'blank', 'default', 'gists', 'scroll', 'booklet', and 'readme'.
 - **Custom Color Schemes**: Personalize project with the 'detective' or 'stuttgart' color schemes.
