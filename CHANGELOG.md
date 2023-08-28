@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/cerico/venlo/compare/v2.0.0...v2.0.1) (2023-08-28)
+
+
+### Bug Fixes
+
+* use framework instead of language in cli ([a6ce954](https://github.com/cerico/venlo/commit/a6ce9543d87017fd5e0a35ad14a0634634b35a63))
+
+
+
 # [2.0.0](https://github.com/cerico/venlo/compare/v1.15.0...v2.0.0) (2023-08-26)
 
 
