@@ -17,19 +17,19 @@ var PKG_ROOT = path.join(distPath, "../")
 
 const main = async () => {
   renderTitle()
-  let { appName, language, packages, design, colorScheme } = argv
+  let { appName, framework, packages, design, colorScheme } = argv
 
   if (!appName) {
-    ;({ appName, language, packages, design, colorScheme } = await runCli())
+    ;({ appName, framework, packages, design, colorScheme } = await runCli())
   }
   const projectDir = path.resolve(process.cwd(), appName)
-  const languages = {
+  const frameworks = {
     next: "template/next",
     astro: "template/astro"
   }
-  const srcDir = path.join(PKG_ROOT, languages[language])
+  const srcDir = path.join(PKG_ROOT, frameworks[framework])
 
-  const spinner = ora2(`Scaffolding ${language} app in: ${projectDir} \n`)
+  const spinner = ora2(`Scaffolding ${framework} app in: ${projectDir} \n`)
   spinner.start()
   await fs.copy(srcDir, projectDir)
   await fs.rename(`${projectDir}/gitignore`, `${projectDir}/.gitignore`)
@@ -44,7 +44,7 @@ const main = async () => {
     await fs.copyFile(py, py2)
     await fs.copyFile(js, js2)
   }
-  if (language === "astro") {
+  if (framework === "astro") {
     const designsDir = path.join(projectDir, `src/designs/${design}`)
     const indexDir = path.join(projectDir, "src/pages")
     await fs.copy(designsDir, indexDir)
@@ -82,7 +82,7 @@ const main = async () => {
   await execa(initCmd, { cwd: projectDir })
   spinner2.succeed(`${chalk.cyan.bold(appName)} git repo created!`)
   logger.info(
-    `✔ ${chalk.cyan.bold(appName)} ${chalk.green.bold(language)} ${chalk.white("app created")} ${
+    `✔ ${chalk.cyan.bold(appName)} ${chalk.green.bold(framework)} ${chalk.white("app created")} ${
       design ? `${chalk.white("using")} ${chalk.green.bold(design)} ${chalk.white("design")}` : ""
     }`
   )
