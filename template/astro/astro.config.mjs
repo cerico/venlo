@@ -8,5 +8,10 @@ export default defineConfig({
     port: 2960,
     host: true
   },
-  integrations: [mdx(),solidJs()]
+  integrations: [mdx(),solidJs()],
+  vite: {
+    ssr: {
+      noExternal: ['@googlemaps/js-api-loader'],
+    }
+  }
 });
