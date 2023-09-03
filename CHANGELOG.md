@@ -1,3 +1,17 @@
+# [2.1.0](https://github.com/cerico/venlo/compare/v2.0.1...v2.1.0) (2023-09-03)
+
+
+### Bug Fixes
+
+* updation vite config for google maps ([9d5c001](https://github.com/cerico/venlo/commit/9d5c0011e9b34f0eef713020ed60d3853e2d035d))
+
+
+### Features
+
+* add google maps package to main ([cfb8b8c](https://github.com/cerico/venlo/commit/cfb8b8c5079baf98ab8fe10f5c587eac650296d1))
+
+
+
 ## [2.0.1](https://github.com/cerico/venlo/compare/v2.0.0...v2.0.1) (2023-08-28)
 
 
