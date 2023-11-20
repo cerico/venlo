@@ -1,15 +1,24 @@
 ---
-import Layout from '../layouts/scroll.astro';
+import Layout from "../layouts/scroll.astro"
 ---
+
+<style>
+  a {
+    border-bottom: 2px solid #ff757d;
+  }
+  a:hover {
+    color: #ff757d;
+    border-bottom: 2px solid #2f2d76;
+  }
+</style>
 <Layout>
   <main class="story-grid">
     <section class="container">
       <h1 class="title">
-          404: Page Not Found.<br/>
+        404: Page Not Found.<br />
       </h1>
-      <p class="subtitle">
-          This page does not exist
-      </p>
+      <p class="subtitle">This page does not exist</p>
+      <p class="subtitle"><a href="/">Take me home</a></p>
     </section>
   </main>
 </Layout>
