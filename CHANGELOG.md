@@ -1,3 +1,17 @@
+# [2.2.0](https://github.com/cerico/venlo/compare/v2.1.0...v2.2.0) (2023-11-21)
+
+
+### Bug Fixes
+
+* update tsconfig.json to node16 ([b633947](https://github.com/cerico/venlo/commit/b63394789e074b104d8b0bb38ffcdda085104680))
+
+
+### Features
+
+* take me home links added to 404s ([f2f1ab8](https://github.com/cerico/venlo/commit/f2f1ab8824571e6f818d85bb162267f6bd018a05))
+
+
+
 # [2.1.0](https://github.com/cerico/venlo/compare/v2.0.1...v2.1.0) (2023-09-03)
 
 
