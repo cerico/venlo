@@ -15,3 +15,5 @@ build:
 	npm run build
 deploy_key:
 	gh secret set DEPLOY_KEY < ~/.ssh/kawajevo/deploy_rsa
+%:
+	@$(MAKE) tldr
