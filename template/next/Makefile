@@ -8,3 +8,5 @@ vercel:
 	vercel git connect
 netlify:
 	netlify init
+%:
+	@$(MAKE) tldr
