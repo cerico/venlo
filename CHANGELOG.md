@@ -1,3 +1,13 @@
+# [2.3.0](https://github.com/cerico/venlo/compare/v2.2.0...v2.3.0) (2024-01-08)
+
+
+### Features
+
+* add catchall default target to makefile ([133eab5](https://github.com/cerico/venlo/commit/133eab555c88ece015cb65622faee1147e15da40))
+* add catchall to template makefiles ([9aa6666](https://github.com/cerico/venlo/commit/9aa66665a4e69a1c30c9febd9684fb2158395093))
+
+
+
 # [2.2.0](https://github.com/cerico/venlo/compare/v2.1.0...v2.2.0) (2023-11-21)
 
 
