@@ -1,0 +1,41 @@
+:root {
+  --bright-green: #78C0A0;
+  --dark: #27262E;
+  --light: #B2B2B2;
+  --pink: #ff757d;
+  --highlight: var(--pink);
+}
+
+.light-on-dark {
+  background-color: var(--dark);
+  color: var(--light);
+
+  a {
+    color: var(--light)
+  }
+
+  p {
+    color: var(--light)
+  }
+
+  .subheader {
+    color: var(--highlight)
+  }
+
+  .sidebar a {
+    color: var(--light)
+  }
+
+  .sidebar h1 a {
+    color: var(--highlight)
+  }
+
+  .sidebar-nav-item {
+    color: var(--light)
+  }
+
+  h1,
+  h2 {
+    color: var(--highlight)
+  }
+}

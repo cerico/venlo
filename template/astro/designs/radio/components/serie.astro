@@ -1,0 +1,26 @@
+---
+import { generateFullSlug } from '../utils/index.mjs';
+
+---
+
+<style>
+  li::first-letter {
+  text-transform: uppercase;
+}
+</style>
+<li>
+  <h2>
+    {Astro.props.category ? <a class="subheader" href={generateFullSlug(Astro.props.category)}>{Astro.props.title}</a> : <span>{Astro.props.title}</span>}
+  </h2>
+   <ul>
+    {Astro.props.stories.map((item, index) => {
+      const category = item.category || Astro.props.category;
+      return (
+      <li>
+        <a
+          href={generateFullSlug(category, item.title)}>{item.title}
+        </a>
+      </li>
+    )})}
+  </ul>
+</li>

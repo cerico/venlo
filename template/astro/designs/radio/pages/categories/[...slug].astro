@@ -1,0 +1,34 @@
+---
+import Layout from "../../layouts/index.astro"
+import Serie from "../../components/serie.astro"
+import { generateSlug } from '../../utils/index.mjs';
+import { series } from "../../text"
+
+export async function getStaticPaths() {
+  const routes = series.map((entry) => ({
+    params: { slug: generateSlug(entry.title) },
+    props: { entry }
+  }))
+  return [routes]
+}
+
+const { entry } = Astro.props
+---
+
+<Layout>
+  <div class="content container">
+    <div class="page">
+      <h2 class="page-title">{entry.title}</h2>
+      <section class="recent-posts">
+        <div class="row listrecent">
+          <ul>
+            {[entry].map((item) => {
+              const u = {...item, title: false, category: item.title}
+              return <Serie {...u} />
+            })}
+            </ul>
+                </div>
+      </section>
+    </div>
+  </div>
+</Layout>

@@ -9,7 +9,7 @@ import { fileURLToPath } from "url"
 import { logger } from "./logger.js"
 import { runCli } from "./cli.js"
 import { argv } from "./yargs.js"
-import { replaceAndWrite, checkPython, renderTitle } from "./utils.js"
+import { rewriteAppName, checkPython, renderTitle } from "./utils.js"
 var execa = promisify(exec)
 var __filename = fileURLToPath(import.meta.url)
 var distPath = path.dirname(__filename)
@@ -27,7 +27,7 @@ const main = async () => {
     next: "template/next",
     astro: "template/astro"
   }
-  const srcDir = path.join(PKG_ROOT, frameworks[framework])
+  const srcDir = path.join(PKG_ROOT, frameworks[framework], "app")
 
   const spinner = ora2(`Scaffolding ${framework} app in: ${projectDir} \n`)
   spinner.start()
@@ -45,24 +45,27 @@ const main = async () => {
     await fs.copyFile(js, js2)
   }
   if (framework === "astro") {
-    const designsDir = path.join(projectDir, `src/designs/${design}`)
-    const indexDir = path.join(projectDir, "src/pages")
+    const designsDir = path.join(PKG_ROOT, frameworks[framework], `designs/${design}`)
+    const indexDir = path.join(projectDir, "src")
     await fs.copy(designsDir, indexDir)
     const pkgJson = await fs.readJSON(path.join(projectDir, "package.json"))
     pkgJson.name = appName
     await fs.writeJSON(path.join(projectDir, "package.json"), pkgJson, {
       spaces: 2
     })
-    await replaceAndWrite(projectDir, appName, `src/layouts/${design}.astro`)
-    await replaceAndWrite(projectDir, appName, "tests/playwright/homepage.spec.ts")
-    await replaceAndWrite(projectDir, appName, "tests/cucumber/features/homepage.feature")
-    await replaceAndWrite(projectDir, appName, "README.md")
-
+    const insertIntoFiles = [
+      "tests/playwright/homepage.spec.ts",
+      "tests/cucumber/features/homepage.feature",
+      "README.md",
+      "src/layouts/index.astro",
+      "src/components/sidebar.astro",
+    ];
+    rewriteAppName(projectDir, appName, insertIntoFiles);
     const repo = `\nrepo:\n\tgh repo create ${appName} --public --source=. --remote=upstream`
     fs.appendFile(path.join(projectDir, "Makefile"), repo)
     if (design === "readme") {
-      const sourceColorPath = path.join(PKG_ROOT, `template/astro/src/styles/gists/${colorScheme}.scss`)
-      const destColorPath = path.join(projectDir, "src/styles/gists/colors.scss")
+      const sourceColorPath = path.join(PKG_ROOT, `template/astro/designs/themes/${colorScheme}.scss`)
+      const destColorPath = path.join(projectDir, "src/styles/themes.scss")
       await fs.copyFile(sourceColorPath, destColorPath)
     }
   }

@@ -1,0 +1,39 @@
+---
+import "../styles/index.scss"
+import data from "../files/prepare.js"
+import Search from "../components/search.astro"
+import Sidebar from "../components/sidebar.astro"
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>AppName</title>
+    <base href="/" />
+    <meta content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="a1 cafe" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" define:vars={{ data }}>
+      import init from "/files/init.js"
+      init(data)
+    </script></head
+  >
+
+  <body class="radio">
+    <div class="page-wrapper">
+      <div>
+        <Search />
+        <Sidebar />
+      </div>
+      <slot />
+    </div>
+    <script is:inline src="/files/drawer.js"></script>
+  </body>
+</html>

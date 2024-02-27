@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/index.astro"
+import Serie from "../components/serie.astro"
+import { episodes } from "../text"
+---
+<Layout>
+  <div class="content container">
+    <div class="page">
+      <h1 class="page-title">Episodes</h1>
+      <section class="recent-posts">
+        <div class="row listrecent">
+          <ul>
+            {episodes.map((item) => {
+              return <Serie {...item} />
+            })}
+            </ul>
+        </div>
+        </section>
+    </div>
+  </div>
+</Layout>
