@@ -1,3 +1,22 @@
+# [3.0.0](https://github.com/cerico/venlo/compare/v2.3.0...v3.0.0) (2024-02-27)
+
+
+### Bug Fixes
+
+* update vitest configuration ([ffe5b3d](https://github.com/cerico/venlo/commit/ffe5b3ded289d4d87ba466535601c7be13394722))
+
+
+### Features
+
+* add radio template ([574522d](https://github.com/cerico/venlo/commit/574522dd111d2bff403c188f461fd8c924063f12))
+
+
+### BREAKING CHANGES
+
+* 
+
+
+
 # [2.3.0](https://github.com/cerico/venlo/compare/v2.2.0...v2.3.0) (2024-01-08)
 
 
