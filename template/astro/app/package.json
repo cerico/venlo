@@ -1,0 +1,43 @@
+{
+  "name": "@example/minimal",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && node generate-hashes",
+    "preview": "astro preview",
+    "test:cucumber": "cucumber-js tests/cucumber/features",
+    "test:playwright": "playwright test tests/playwright/",
+    "test:vitest": "vitest vitest"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.14.0",
+    "@astrojs/solid-js": "^2.0.2",
+    "@googlemaps/js-api-loader": "^1.16.2",
+    "acorn": "^8.11.3",
+    "astro": "^2.0.2",
+    "chalk": "^5.0.1",
+    "cheerio": "^1.0.0-rc.11",
+    "d3": "^7.8.2",
+    "escodegen": "^2.1.0",
+    "globby": "^13.1.1",
+    "inquirer": "^9.2.15",
+    "js-sha256": "^0.9.0",
+    "sass": "^1.57.1",
+    "solid-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.2.0",
+    "@playwright/test": "^1.35.1",
+    "@solidjs/testing-library": "^0.8.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/user-event": "^14.4.3",
+    "express": "^4.18.2",
+    "happy-dom": "^9.20.3",
+    "playwright": "^1.35.1",
+    "puppeteer": "^20.7.4",
+    "vite-plugin-solid": "^2.7.0",
+    "vitest": "^0.32.2"
+  }
+}

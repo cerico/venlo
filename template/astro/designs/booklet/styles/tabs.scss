@@ -1,0 +1,153 @@
+@use 'colors';
+
+.tab {
+  @extend .colors;
+}
+
+.overlay {
+  height: 100%;
+}
+
+.fixed-left {
+  position: absolute;
+  overflow-y: auto;
+  top: 0;
+  width: 30%;
+  height: 100vh;
+}
+
+.inner {
+  padding: 50px;
+}
+
+.scrolling-right {
+  height: 100%;
+  width: 50%;
+  padding: 0;
+  border-left: 1px solid;
+  font-weight: 300;
+}
+.scrolling-right .content {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.scrolling-right p {
+  width: 100%;
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.tabs {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  z-index: 2;
+  padding: 75px 0 48px;
+}
+
+@media screen and (min-width: 768px) and (orientation:landscape)  {
+  #tab-one {
+    transform: translateX(-100%);
+    width: 100vw;
+  }
+  #tab-two {
+    transform: translateX(-80px);
+    width: calc(100vw - 40px);
+  }
+  #tab-three {
+    transform: translateX(-40px);
+    width: calc(100vw - 80px);
+  }
+  .overlay .wrapper {
+    display: flex;
+  }
+  .up {
+    transform: translateX(-100%) !important;
+  }
+
+  .tab {
+    transition: transform 1s ease 0.1s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+  }
+  .tab p { color: inherit }
+  .scrolling-right {
+    position: absolute;
+    overflow-y: hidden;
+    left: 30%;
+    width: calc(70% - 80px);
+  }
+  .tab-three .scrolling-right {
+    width: 70%;
+  }
+  .active .scrolling-right {
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation:portrait) {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    overflow: auto;
+    transform: none;
+    background: inherit;
+  }
+  .overlay .wrapper {
+    flex-direction: column;
+  }
+  .slide {
+    transform: translateY(100%);
+    transition: transform 0.6s ease;
+  }
+
+  .up .slide {
+    transform: none;
+    transition: transform 0.6s ease;
+  }
+  .scrolling-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid;
+    border-left: none;
+  }
+  .scrolling-right .text {
+    max-width: none;
+    margin-top: 48px;
+  }
+  .fixed-left {
+    position: static;
+    display: flex;
+    height: auto;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .inner {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-box {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 40px;
+    max-width: 100%;
+  }
+}

@@ -28,13 +28,29 @@ export const checkPython = () => {
   }
 }
 
-export const replaceAndWrite = async (projectDir, appName, filePath) => {
+const replaceAndWrite = async (projectDir, appName, filePath) => {
   try {
     let contents = await fs.readFile(path.join(projectDir, filePath), "utf-8")
     const newTitle = appName.charAt(0).toUpperCase() + appName.slice(1)
-    const replaced = contents.replace(/Page Title/g, newTitle)
+    const replaced = contents.replace(/AppName/g, newTitle)
     await fs.writeFile(path.join(projectDir, filePath), replaced, "utf-8")
-  } catch (err) {
-    console.log(err)
+  } catch (fileError) {
+    if (fileError.code === 'ENOENT') {
+      console.log(`Skipping ${filePath}.`);
+    } else {
+      console.error(`Error updating file ${filePath}:`, fileError);
+    }
   }
 }
+
+export const rewriteAppName = async (projectDir, appName, files) => {
+  try {
+    for (const file of files) {
+      await replaceAndWrite(projectDir, appName, file);
+    }
+
+    console.log("Files updated successfully!");
+  } catch (error) {
+    console.error("Error updating files:", error);
+  }
+};

@@ -1,0 +1,71 @@
+@use 'fonts';
+@use 'colors';
+
+.searchbar {
+  border-radius: 11px;
+  height: 29px;
+  padding: 5px;
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+
+.container {
+  max-width: 38rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  // @extend .courier-prime-regular;
+  text-align: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 4rem;
+
+  @media (min-width: 48em) {
+    max-width: 38rem;
+    margin-left: 15rem;
+    margin-right: 2rem;
+    padding-bottom: 0rem;
+  }
+}
+
+
+.sidebar {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  border-bottom: dashed;
+  border-right: none;
+  position: fixed;
+  height: auto;
+
+  @media (min-width: 48em) {
+    border-bottom: none;
+    border-right: dashed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 11.6rem;
+    text-align: left;
+    height: 100%;
+    overflow: scroll;
+  }
+
+  @media (max-width: 48em) {
+    opacity: 0;
+    transform: translateY(0%);
+    pointer-events: none;
+  }
+}
+
+.sidebar-sticky {
+  @media (min-width: 48em) {
+    position: absolute;
+    right: 1rem;
+    bottom: 4.6rem;
+    left: 0.5rem;
+  }
+}

@@ -1,5 +1,15 @@
 import inquirer, { QuestionCollection } from "inquirer"
 
+const choices = [
+  { name: "default", value: "default", short: "default" },
+  { name: "blank", value: "blank", short: "blank" },
+  { name: "gists", value: "gists", short: "gists" },
+  { name: "radio", value: "radio", short: "radio" },
+  { name: "scroll", value: "scroll", short: "scroll" },
+  { name: "booklet", value: "booklet", short: "booklet" },
+  { name: "readme", value: "readme", short: "readme" }
+]
+
 interface CliResults {
   appName?: string
   framework?: string
@@ -53,14 +63,7 @@ export const runCli = async (): Promise<CliResults> => {
       name: "design",
       type: "list",
       message: "Choose a design",
-      choices: [
-        { name: "default", value: "default", short: "default" },
-        { name: "blank", value: "blank", short: "blank" },
-        { name: "gists", value: "gists", short: "gists" },
-        { name: "scroll", value: "scroll", short: "scroll" },
-        { name: "booklet", value: "booklet", short: "booklet" },
-        { name: "readme", value: "readme", short: "readme" }
-      ],
+      choices,
       default: "default"
     }
 
