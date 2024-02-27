@@ -10,7 +10,7 @@ function Header() {
   }
   return (
     <>
-    <div onClick={increment}>Current: {store.score().current}</div>
+    <div onClick={increment}>{store.score().current}</div>
     <button onClick={reset}>Reset</button>
     </>
   )
