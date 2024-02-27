@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@solidjs/testing-library"
 import App from "../../src/solid/components/App"
 
-const yay = "Page Title"
+const PageTitle = "AppName"
 
 test("Math.sqrt()", () => {
   expect(Math.sqrt(4)).toBe(2)
@@ -27,7 +27,12 @@ describe("App", () => {
     const button = (screen.getByText(0)) as HTMLButtonElement
     expect(button).toBeVisible()
     fireEvent.click(button)
-    const countText = screen.getByText(31)
+    const countText = await screen.findByText(31);
     expect(countText).toBeVisible()
+    const increment = (screen.getByText('Reset')) as HTMLButtonElement
+    expect(increment).toBeVisible()
+    fireEvent.click(increment)
+    const zeroText = await screen.findByText(0);
+    expect(zeroText).toBeVisible()
   })
 })

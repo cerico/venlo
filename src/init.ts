@@ -54,11 +54,12 @@ const main = async () => {
       spaces: 2
     })
     const insertIntoFiles = [
-      "tests/playwright/homepage.spec.ts",
-      "tests/cucumber/features/homepage.feature",
       "README.md",
       "src/layouts/index.astro",
       "src/components/sidebar.astro",
+      "tests/playwright/homepage.spec.ts",
+      "tests/cucumber/features/homepage.feature",
+      "tests/vitest/homepage.test.tsx"
     ];
     rewriteAppName(projectDir, appName, insertIntoFiles);
     const repo = `\nrepo:\n\tgh repo create ${appName} --public --source=. --remote=upstream`
