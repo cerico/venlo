@@ -1,3 +1,12 @@
+# [3.1.0](https://github.com/cerico/venlo/compare/v3.0.0...v3.1.0) (2024-02-28)
+
+
+### Features
+
+* prevent blank answers from terminal ([fa3d8b6](https://github.com/cerico/venlo/commit/fa3d8b6ecf7df11314a0319a672c2be92767290d))
+
+
+
 # [3.0.0](https://github.com/cerico/venlo/compare/v2.3.0...v3.0.0) (2024-02-27)
 
 
