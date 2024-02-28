@@ -27,12 +27,12 @@ describe("App", () => {
     const button = (screen.getByText(0)) as HTMLButtonElement
     expect(button).toBeVisible()
     fireEvent.click(button)
-    const countText = await screen.findByText(31);
+    const countText = await screen.findByText(31)
     expect(countText).toBeVisible()
     const increment = (screen.getByText('Reset')) as HTMLButtonElement
     expect(increment).toBeVisible()
     fireEvent.click(increment)
-    const zeroText = await screen.findByText(0);
+    const zeroText = await screen.findByText(0)
     expect(zeroText).toBeVisible()
   })
 })

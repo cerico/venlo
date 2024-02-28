@@ -20,7 +20,7 @@ const main = async () => {
   let { appName, framework, packages, design, colorScheme } = argv
 
   if (!appName) {
-    ;({ appName, framework, packages, design, colorScheme } = await runCli())
+    ({ appName, framework, packages, design, colorScheme } = await runCli())
   }
   const projectDir = path.resolve(process.cwd(), appName)
   const frameworks = {
@@ -60,8 +60,8 @@ const main = async () => {
       "tests/playwright/homepage.spec.ts",
       "tests/cucumber/features/homepage.feature",
       "tests/vitest/homepage.test.tsx"
-    ];
-    rewriteAppName(projectDir, appName, insertIntoFiles);
+    ]
+    rewriteAppName(projectDir, appName, insertIntoFiles)
     const repo = `\nrepo:\n\tgh repo create ${appName} --public --source=. --remote=upstream`
     fs.appendFile(path.join(projectDir, "Makefile"), repo)
     if (design === "readme") {
@@ -86,8 +86,7 @@ const main = async () => {
   await execa(initCmd, { cwd: projectDir })
   spinner2.succeed(`${chalk.cyan.bold(appName)} git repo created!`)
   logger.info(
-    `✔ ${chalk.cyan.bold(appName)} ${chalk.green.bold(framework)} ${chalk.white("app created")} ${
-      design ? `${chalk.white("using")} ${chalk.green.bold(design)} ${chalk.white("design")}` : ""
+    `✔ ${chalk.cyan.bold(appName)} ${chalk.green.bold(framework)} ${chalk.white("app created")} ${design ? `${chalk.white("using")} ${chalk.green.bold(design)} ${chalk.white("design")}` : ""
     }`
   )
   logger.steps("Next steps:")

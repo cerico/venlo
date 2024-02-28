@@ -36,9 +36,9 @@ const replaceAndWrite = async (projectDir, appName, filePath) => {
     await fs.writeFile(path.join(projectDir, filePath), replaced, "utf-8")
   } catch (fileError) {
     if (fileError.code === 'ENOENT') {
-      console.log(`Skipping ${filePath}.`);
+      console.log(`Skipping ${filePath}.`)
     } else {
-      console.error(`Error updating file ${filePath}:`, fileError);
+      console.error(`Error updating file ${filePath}:`, fileError)
     }
   }
 }
@@ -46,11 +46,11 @@ const replaceAndWrite = async (projectDir, appName, filePath) => {
 export const rewriteAppName = async (projectDir, appName, files) => {
   try {
     for (const file of files) {
-      await replaceAndWrite(projectDir, appName, file);
+      await replaceAndWrite(projectDir, appName, file)
     }
 
-    console.log("Files updated successfully!");
+    console.log("Files updated successfully!")
   } catch (error) {
-    console.error("Error updating files:", error);
+    console.error("Error updating files:", error)
   }
-};
+}
