@@ -28,6 +28,12 @@ export const runCli = async (): Promise<CliResults> => {
       name: "appName",
       type: "input",
       message: "What will your project be called?",
+      validate: (input: string) => {
+        if (input.trim() === '') {
+          return 'App name cannot be blank.'
+        }
+        return true
+      },
       transformer: (input: string) => {
         return input.trim()
       }
