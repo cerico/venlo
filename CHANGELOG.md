@@ -1,3 +1,12 @@
+## [3.1.1](https://github.com/cerico/venlo/compare/v3.1.0...v3.1.1) (2024-07-11)
+
+
+### Bug Fixes
+
+* turn off lightmode/darkmode for now ([72d6e15](https://github.com/cerico/venlo/commit/72d6e1501adae70f6a953fe0eb5e3837af2ac031))
+
+
+
 # [3.1.0](https://github.com/cerico/venlo/compare/v3.0.0...v3.1.0) (2024-02-28)
 
 
